@@ -1,0 +1,743 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="18" errors="0" failures="0" not-run="0" inconclusive="0" ignored="180" skipped="0" invalid="0" date="2023-01-17" time="05:31:42">
+  <environment nunit-version="2.5.8.0" clr-version="Unknown" user-domain="REDMOND" user="nanxiangliu" platform="Microsoft Windows 11 企业版|C:\WINDOWS|\Device\Harddisk1\Partition3" machine-name="DESKTOP-E7NG40Q" cwd="D:\workspace\azure-powershell\src\ContainerRegistry" os-version="10.0.22621" />
+  <culture-info current-culture="en-001" current-uiculture="en-US" />
+  <test-suite type="TestFixture" name="Pester" executed="True" result="Ignored" success="True" time="18.8661" asserts="0" description="Pester">
+    <results>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistry.Tests.ps1" executed="True" result="Ignored" success="True" time="1.8131" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistry.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistry" executed="True" result="Ignored" success="True" time="1.6055" asserts="0" description="Get-AzContainerRegistry">
+            <results>
+              <test-case description="List" name="Get-AzContainerRegistry.List" time="0.9687" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Get" name="Get-AzContainerRegistry.Get" time="0.2176" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="List1" name="Get-AzContainerRegistry.List1" time="0.2175" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="GetViaIdentity" name="Get-AzContainerRegistry.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryAgentPool.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2088" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryAgentPool.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistryAgentPool" executed="True" result="Ignored" success="True" time="0.0607" asserts="0" description="Get-AzContainerRegistryAgentPool">
+            <results>
+              <test-case description="List" name="Get-AzContainerRegistryAgentPool.List" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Get" name="Get-AzContainerRegistryAgentPool.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzContainerRegistryAgentPool.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryAgentPoolQueueStatus.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2207" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryAgentPoolQueueStatus.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistryAgentPoolQueueStatus" executed="True" result="Ignored" success="True" time="0.0616" asserts="0" description="Get-AzContainerRegistryAgentPoolQueueStatus">
+            <results>
+              <test-case description="Get" name="Get-AzContainerRegistryAgentPoolQueueStatus.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzContainerRegistryAgentPoolQueueStatus.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryBuildSourceUploadUrl.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2014" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryBuildSourceUploadUrl.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistryBuildSourceUploadUrl" executed="True" result="Ignored" success="True" time="0.0536" asserts="0" description="Get-AzContainerRegistryBuildSourceUploadUrl">
+            <results>
+              <test-case description="Get" name="Get-AzContainerRegistryBuildSourceUploadUrl.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzContainerRegistryBuildSourceUploadUrl.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryConnectedRegistry.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2042" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryConnectedRegistry.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistryConnectedRegistry" executed="True" result="Ignored" success="True" time="0.0569" asserts="0" description="Get-AzContainerRegistryConnectedRegistry">
+            <results>
+              <test-case description="List" name="Get-AzContainerRegistryConnectedRegistry.List" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Get" name="Get-AzContainerRegistryConnectedRegistry.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzContainerRegistryConnectedRegistry.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryCredential.Tests.ps1" executed="True" result="Success" success="True" time="0.4063" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryCredential.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistryCredential" executed="True" result="Success" success="True" time="0.2543" asserts="0" description="Get-AzContainerRegistryCredential">
+            <results>
+              <test-case description="List" name="Get-AzContainerRegistryCredential.List" time="0.1965" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryExportPipeline.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2089" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryExportPipeline.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistryExportPipeline" executed="True" result="Ignored" success="True" time="0.0574" asserts="0" description="Get-AzContainerRegistryExportPipeline">
+            <results>
+              <test-case description="List" name="Get-AzContainerRegistryExportPipeline.List" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Get" name="Get-AzContainerRegistryExportPipeline.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzContainerRegistryExportPipeline.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryImportPipeline.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2011" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryImportPipeline.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistryImportPipeline" executed="True" result="Ignored" success="True" time="0.0541" asserts="0" description="Get-AzContainerRegistryImportPipeline">
+            <results>
+              <test-case description="List" name="Get-AzContainerRegistryImportPipeline.List" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Get" name="Get-AzContainerRegistryImportPipeline.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzContainerRegistryImportPipeline.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryPipelineRun.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2085" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryPipelineRun.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistryPipelineRun" executed="True" result="Ignored" success="True" time="0.0579" asserts="0" description="Get-AzContainerRegistryPipelineRun">
+            <results>
+              <test-case description="List" name="Get-AzContainerRegistryPipelineRun.List" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Get" name="Get-AzContainerRegistryPipelineRun.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzContainerRegistryPipelineRun.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryPrivateLinkResource.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2005" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryPrivateLinkResource.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistryPrivateLinkResource" executed="True" result="Ignored" success="True" time="0.0539" asserts="0" description="Get-AzContainerRegistryPrivateLinkResource">
+            <results>
+              <test-case description="List" name="Get-AzContainerRegistryPrivateLinkResource.List" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Get" name="Get-AzContainerRegistryPrivateLinkResource.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzContainerRegistryPrivateLinkResource.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryReplication.Tests.ps1" executed="True" result="Ignored" success="True" time="0.6501" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryReplication.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistryReplication" executed="True" result="Ignored" success="True" time="0.5056" asserts="0" description="Get-AzContainerRegistryReplication">
+            <results>
+              <test-case description="List" name="Get-AzContainerRegistryReplication.List" time="0.222" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Get" name="Get-AzContainerRegistryReplication.Get" time="0.2155" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="GetViaIdentity" name="Get-AzContainerRegistryReplication.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryRun.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2107" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryRun.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistryRun" executed="True" result="Ignored" success="True" time="0.0619" asserts="0" description="Get-AzContainerRegistryRun">
+            <results>
+              <test-case description="List" name="Get-AzContainerRegistryRun.List" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Get" name="Get-AzContainerRegistryRun.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzContainerRegistryRun.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryRunLogSasUrl.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2006" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryRunLogSasUrl.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistryRunLogSasUrl" executed="True" result="Ignored" success="True" time="0.0543" asserts="0" description="Get-AzContainerRegistryRunLogSasUrl">
+            <results>
+              <test-case description="Get" name="Get-AzContainerRegistryRunLogSasUrl.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzContainerRegistryRunLogSasUrl.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryScopeMap.Tests.ps1" executed="True" result="Ignored" success="True" time="0.199" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryScopeMap.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistryScopeMap" executed="True" result="Ignored" success="True" time="0.0538" asserts="0" description="Get-AzContainerRegistryScopeMap">
+            <results>
+              <test-case description="List" name="Get-AzContainerRegistryScopeMap.List" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Get" name="Get-AzContainerRegistryScopeMap.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzContainerRegistryScopeMap.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryTask.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2087" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryTask.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistryTask" executed="True" result="Ignored" success="True" time="0.0551" asserts="0" description="Get-AzContainerRegistryTask">
+            <results>
+              <test-case description="List" name="Get-AzContainerRegistryTask.List" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Get" name="Get-AzContainerRegistryTask.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzContainerRegistryTask.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryTaskDetail.Tests.ps1" executed="True" result="Ignored" success="True" time="0.1971" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryTaskDetail.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistryTaskDetail" executed="True" result="Ignored" success="True" time="0.0524" asserts="0" description="Get-AzContainerRegistryTaskDetail">
+            <results>
+              <test-case description="Get" name="Get-AzContainerRegistryTaskDetail.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzContainerRegistryTaskDetail.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryTaskRun.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2079" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryTaskRun.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistryTaskRun" executed="True" result="Ignored" success="True" time="0.0558" asserts="0" description="Get-AzContainerRegistryTaskRun">
+            <results>
+              <test-case description="List" name="Get-AzContainerRegistryTaskRun.List" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Get" name="Get-AzContainerRegistryTaskRun.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzContainerRegistryTaskRun.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryTaskRunDetail.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2026" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryTaskRunDetail.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistryTaskRunDetail" executed="True" result="Ignored" success="True" time="0.0529" asserts="0" description="Get-AzContainerRegistryTaskRunDetail">
+            <results>
+              <test-case description="Get" name="Get-AzContainerRegistryTaskRunDetail.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzContainerRegistryTaskRunDetail.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryToken.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2077" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryToken.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistryToken" executed="True" result="Ignored" success="True" time="0.0561" asserts="0" description="Get-AzContainerRegistryToken">
+            <results>
+              <test-case description="List" name="Get-AzContainerRegistryToken.List" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Get" name="Get-AzContainerRegistryToken.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzContainerRegistryToken.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryUsage.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2077" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryUsage.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistryUsage" executed="True" result="Ignored" success="True" time="0.0578" asserts="0" description="Get-AzContainerRegistryUsage">
+            <results>
+              <test-case description="List" name="Get-AzContainerRegistryUsage.List" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryWebhook.Tests.ps1" executed="True" result="Ignored" success="True" time="0.6267" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryWebhook.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistryWebhook" executed="True" result="Ignored" success="True" time="0.4817" asserts="0" description="Get-AzContainerRegistryWebhook">
+            <results>
+              <test-case description="List" name="Get-AzContainerRegistryWebhook.List" time="0.2014" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Get" name="Get-AzContainerRegistryWebhook.Get" time="0.2126" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="GetViaIdentity" name="Get-AzContainerRegistryWebhook.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryWebhookCallbackConfig.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2038" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryWebhookCallbackConfig.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistryWebhookCallbackConfig" executed="True" result="Ignored" success="True" time="0.0567" asserts="0" description="Get-AzContainerRegistryWebhookCallbackConfig">
+            <results>
+              <test-case description="Get" name="Get-AzContainerRegistryWebhookCallbackConfig.Get" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GetViaIdentity" name="Get-AzContainerRegistryWebhookCallbackConfig.GetViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryWebhookEvent.Tests.ps1" executed="True" result="Success" success="True" time="0.4461" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Get-AzContainerRegistryWebhookEvent.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-AzContainerRegistryWebhookEvent" executed="True" result="Success" success="True" time="0.299" asserts="0" description="Get-AzContainerRegistryWebhookEvent">
+            <results>
+              <test-case description="List" name="Get-AzContainerRegistryWebhookEvent.List" time="0.232" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Import-AzContainerRegistryImage.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2114" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Import-AzContainerRegistryImage.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Import-AzContainerRegistryImage" executed="True" result="Ignored" success="True" time="0.0599" asserts="0" description="Import-AzContainerRegistryImage">
+            <results>
+              <test-case description="ImportExpanded" name="Import-AzContainerRegistryImage.ImportExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Import" name="Import-AzContainerRegistryImage.Import" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="ImportViaIdentityExpanded" name="Import-AzContainerRegistryImage.ImportViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="ImportViaIdentity" name="Import-AzContainerRegistryImage.ImportViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Invoke-AzContainerRegistryDeactivateConnectedRegistry.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2056" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Invoke-AzContainerRegistryDeactivateConnectedRegistry.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Invoke-AzContainerRegistryDeactivateConnectedRegistry" executed="True" result="Ignored" success="True" time="0.0593" asserts="0" description="Invoke-AzContainerRegistryDeactivateConnectedRegistry">
+            <results>
+              <test-case description="Deactivate" name="Invoke-AzContainerRegistryDeactivateConnectedRegistry.Deactivate" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="DeactivateViaIdentity" name="Invoke-AzContainerRegistryDeactivateConnectedRegistry.DeactivateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Invoke-AzContainerRegistryScheduleRegistryRun.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2104" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Invoke-AzContainerRegistryScheduleRegistryRun.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Invoke-AzContainerRegistryScheduleRegistryRun" executed="True" result="Ignored" success="True" time="0.0603" asserts="0" description="Invoke-AzContainerRegistryScheduleRegistryRun">
+            <results>
+              <test-case description="ScheduleExpanded" name="Invoke-AzContainerRegistryScheduleRegistryRun.ScheduleExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Schedule" name="Invoke-AzContainerRegistryScheduleRegistryRun.Schedule" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="ScheduleViaIdentityExpanded" name="Invoke-AzContainerRegistryScheduleRegistryRun.ScheduleViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="ScheduleViaIdentity" name="Invoke-AzContainerRegistryScheduleRegistryRun.ScheduleViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistry.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2099" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistry.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="New-AzContainerRegistry" executed="True" result="Ignored" success="True" time="0.064" asserts="0" description="New-AzContainerRegistry">
+            <results>
+              <test-case description="CreateExpanded" name="New-AzContainerRegistry.CreateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Create" name="New-AzContainerRegistry.Create" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentityExpanded" name="New-AzContainerRegistry.CreateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentity" name="New-AzContainerRegistry.CreateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryAgentPool.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2057" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryAgentPool.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="New-AzContainerRegistryAgentPool" executed="True" result="Ignored" success="True" time="0.0601" asserts="0" description="New-AzContainerRegistryAgentPool">
+            <results>
+              <test-case description="CreateExpanded" name="New-AzContainerRegistryAgentPool.CreateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Create" name="New-AzContainerRegistryAgentPool.Create" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentityExpanded" name="New-AzContainerRegistryAgentPool.CreateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentity" name="New-AzContainerRegistryAgentPool.CreateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryConnectedRegistry.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2101" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryConnectedRegistry.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="New-AzContainerRegistryConnectedRegistry" executed="True" result="Ignored" success="True" time="0.0551" asserts="0" description="New-AzContainerRegistryConnectedRegistry">
+            <results>
+              <test-case description="CreateExpanded" name="New-AzContainerRegistryConnectedRegistry.CreateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Create" name="New-AzContainerRegistryConnectedRegistry.Create" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentityExpanded" name="New-AzContainerRegistryConnectedRegistry.CreateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentity" name="New-AzContainerRegistryConnectedRegistry.CreateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryCredential.Tests.ps1" executed="True" result="Ignored" success="True" time="0.4796" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryCredential.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="New-AzContainerRegistryCredential" executed="True" result="Ignored" success="True" time="0.3334" asserts="0" description="New-AzContainerRegistryCredential">
+            <results>
+              <test-case description="RegenerateExpanded" name="New-AzContainerRegistryCredential.RegenerateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Regenerate" name="New-AzContainerRegistryCredential.Regenerate" time="0.267" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="RegenerateViaIdentityExpanded" name="New-AzContainerRegistryCredential.RegenerateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="RegenerateViaIdentity" name="New-AzContainerRegistryCredential.RegenerateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryCredentials.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2111" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryCredentials.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="New-AzContainerRegistryCredentials" executed="True" result="Ignored" success="True" time="0.0632" asserts="0" description="New-AzContainerRegistryCredentials">
+            <results>
+              <test-case description="GenerateExpanded" name="New-AzContainerRegistryCredentials.GenerateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Generate" name="New-AzContainerRegistryCredentials.Generate" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GenerateViaIdentityExpanded" name="New-AzContainerRegistryCredentials.GenerateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="GenerateViaIdentity" name="New-AzContainerRegistryCredentials.GenerateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryExportPipeline.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2047" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryExportPipeline.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="New-AzContainerRegistryExportPipeline" executed="True" result="Ignored" success="True" time="0.0593" asserts="0" description="New-AzContainerRegistryExportPipeline">
+            <results>
+              <test-case description="CreateExpanded" name="New-AzContainerRegistryExportPipeline.CreateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Create" name="New-AzContainerRegistryExportPipeline.Create" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentityExpanded" name="New-AzContainerRegistryExportPipeline.CreateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentity" name="New-AzContainerRegistryExportPipeline.CreateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryImportPipeline.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2144" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryImportPipeline.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="New-AzContainerRegistryImportPipeline" executed="True" result="Ignored" success="True" time="0.063" asserts="0" description="New-AzContainerRegistryImportPipeline">
+            <results>
+              <test-case description="CreateExpanded" name="New-AzContainerRegistryImportPipeline.CreateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Create" name="New-AzContainerRegistryImportPipeline.Create" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentityExpanded" name="New-AzContainerRegistryImportPipeline.CreateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentity" name="New-AzContainerRegistryImportPipeline.CreateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryIPRuleObject.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2015" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryIPRuleObject.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="New-AzContainerRegistryIPRuleObject" executed="True" result="Ignored" success="True" time="0.0565" asserts="0" description="New-AzContainerRegistryIPRuleObject">
+            <results>
+              <test-case description="__AllParameterSets" name="New-AzContainerRegistryIPRuleObject.__AllParameterSets" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryNetworkRuleSetObject.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2043" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryNetworkRuleSetObject.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="New-AzContainerRegistryNetworkRuleSetObject" executed="True" result="Ignored" success="True" time="0.0543" asserts="0" description="New-AzContainerRegistryNetworkRuleSetObject">
+            <results>
+              <test-case description="__AllParameterSets" name="New-AzContainerRegistryNetworkRuleSetObject.__AllParameterSets" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryPipelineRun.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryPipelineRun.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="New-AzContainerRegistryPipelineRun" executed="True" result="Ignored" success="True" time="0.054" asserts="0" description="New-AzContainerRegistryPipelineRun">
+            <results>
+              <test-case description="CreateExpanded" name="New-AzContainerRegistryPipelineRun.CreateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Create" name="New-AzContainerRegistryPipelineRun.Create" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentityExpanded" name="New-AzContainerRegistryPipelineRun.CreateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentity" name="New-AzContainerRegistryPipelineRun.CreateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryReplication.Tests.ps1" executed="True" result="Ignored" success="True" time="0.4199" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryReplication.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="New-AzContainerRegistryReplication" executed="True" result="Ignored" success="True" time="0.2691" asserts="0" description="New-AzContainerRegistryReplication">
+            <results>
+              <test-case description="CreateExpanded" name="New-AzContainerRegistryReplication.CreateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Create" name="New-AzContainerRegistryReplication.Create" time="0.2041" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="CreateViaIdentityExpanded" name="New-AzContainerRegistryReplication.CreateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentity" name="New-AzContainerRegistryReplication.CreateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryScopeMap.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2009" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryScopeMap.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="New-AzContainerRegistryScopeMap" executed="True" result="Ignored" success="True" time="0.0538" asserts="0" description="New-AzContainerRegistryScopeMap">
+            <results>
+              <test-case description="CreateExpanded" name="New-AzContainerRegistryScopeMap.CreateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Create" name="New-AzContainerRegistryScopeMap.Create" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentityExpanded" name="New-AzContainerRegistryScopeMap.CreateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentity" name="New-AzContainerRegistryScopeMap.CreateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryTask.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2099" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryTask.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="New-AzContainerRegistryTask" executed="True" result="Ignored" success="True" time="0.0575" asserts="0" description="New-AzContainerRegistryTask">
+            <results>
+              <test-case description="CreateExpanded" name="New-AzContainerRegistryTask.CreateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Create" name="New-AzContainerRegistryTask.Create" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentityExpanded" name="New-AzContainerRegistryTask.CreateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentity" name="New-AzContainerRegistryTask.CreateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryTaskRun.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2008" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryTaskRun.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="New-AzContainerRegistryTaskRun" executed="True" result="Ignored" success="True" time="0.0547" asserts="0" description="New-AzContainerRegistryTaskRun">
+            <results>
+              <test-case description="CreateExpanded" name="New-AzContainerRegistryTaskRun.CreateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Create" name="New-AzContainerRegistryTaskRun.Create" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentityExpanded" name="New-AzContainerRegistryTaskRun.CreateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentity" name="New-AzContainerRegistryTaskRun.CreateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryToken.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2066" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryToken.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="New-AzContainerRegistryToken" executed="True" result="Ignored" success="True" time="0.0566" asserts="0" description="New-AzContainerRegistryToken">
+            <results>
+              <test-case description="CreateExpanded" name="New-AzContainerRegistryToken.CreateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Create" name="New-AzContainerRegistryToken.Create" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentityExpanded" name="New-AzContainerRegistryToken.CreateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentity" name="New-AzContainerRegistryToken.CreateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryWebhook.Tests.ps1" executed="True" result="Ignored" success="True" time="0.207" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\New-AzContainerRegistryWebhook.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="New-AzContainerRegistryWebhook" executed="True" result="Ignored" success="True" time="0.0603" asserts="0" description="New-AzContainerRegistryWebhook">
+            <results>
+              <test-case description="CreateExpanded" name="New-AzContainerRegistryWebhook.CreateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Create" name="New-AzContainerRegistryWebhook.Create" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentityExpanded" name="New-AzContainerRegistryWebhook.CreateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CreateViaIdentity" name="New-AzContainerRegistryWebhook.CreateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistry.Tests.ps1" executed="True" result="Ignored" success="True" time="0.6009" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistry.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-AzContainerRegistry" executed="True" result="Ignored" success="True" time="0.4545" asserts="0" description="Remove-AzContainerRegistry">
+            <results>
+              <test-case description="Delete" name="Remove-AzContainerRegistry.Delete" time="0.3848" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="DeleteViaIdentity" name="Remove-AzContainerRegistry.DeleteViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistryAgentPool.Tests.ps1" executed="True" result="Ignored" success="True" time="0.1965" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistryAgentPool.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-AzContainerRegistryAgentPool" executed="True" result="Ignored" success="True" time="0.0532" asserts="0" description="Remove-AzContainerRegistryAgentPool">
+            <results>
+              <test-case description="Delete" name="Remove-AzContainerRegistryAgentPool.Delete" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="DeleteViaIdentity" name="Remove-AzContainerRegistryAgentPool.DeleteViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistryConnectedRegistry.Tests.ps1" executed="True" result="Ignored" success="True" time="0.1931" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistryConnectedRegistry.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-AzContainerRegistryConnectedRegistry" executed="True" result="Ignored" success="True" time="0.0578" asserts="0" description="Remove-AzContainerRegistryConnectedRegistry">
+            <results>
+              <test-case description="Delete" name="Remove-AzContainerRegistryConnectedRegistry.Delete" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="DeleteViaIdentity" name="Remove-AzContainerRegistryConnectedRegistry.DeleteViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistryExportPipeline.Tests.ps1" executed="True" result="Ignored" success="True" time="0.1889" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistryExportPipeline.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-AzContainerRegistryExportPipeline" executed="True" result="Ignored" success="True" time="0.0522" asserts="0" description="Remove-AzContainerRegistryExportPipeline">
+            <results>
+              <test-case description="Delete" name="Remove-AzContainerRegistryExportPipeline.Delete" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="DeleteViaIdentity" name="Remove-AzContainerRegistryExportPipeline.DeleteViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistryImportPipeline.Tests.ps1" executed="True" result="Ignored" success="True" time="0.1943" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistryImportPipeline.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-AzContainerRegistryImportPipeline" executed="True" result="Ignored" success="True" time="0.0528" asserts="0" description="Remove-AzContainerRegistryImportPipeline">
+            <results>
+              <test-case description="Delete" name="Remove-AzContainerRegistryImportPipeline.Delete" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="DeleteViaIdentity" name="Remove-AzContainerRegistryImportPipeline.DeleteViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistryPipelineRun.Tests.ps1" executed="True" result="Ignored" success="True" time="0.1917" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistryPipelineRun.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-AzContainerRegistryPipelineRun" executed="True" result="Ignored" success="True" time="0.0533" asserts="0" description="Remove-AzContainerRegistryPipelineRun">
+            <results>
+              <test-case description="Delete" name="Remove-AzContainerRegistryPipelineRun.Delete" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="DeleteViaIdentity" name="Remove-AzContainerRegistryPipelineRun.DeleteViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistryReplication.Tests.ps1" executed="True" result="Ignored" success="True" time="0.385" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistryReplication.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-AzContainerRegistryReplication" executed="True" result="Ignored" success="True" time="0.2479" asserts="0" description="Remove-AzContainerRegistryReplication">
+            <results>
+              <test-case description="Delete" name="Remove-AzContainerRegistryReplication.Delete" time="0.1904" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="DeleteViaIdentity" name="Remove-AzContainerRegistryReplication.DeleteViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistryScopeMap.Tests.ps1" executed="True" result="Ignored" success="True" time="0.1956" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistryScopeMap.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-AzContainerRegistryScopeMap" executed="True" result="Ignored" success="True" time="0.0524" asserts="0" description="Remove-AzContainerRegistryScopeMap">
+            <results>
+              <test-case description="Delete" name="Remove-AzContainerRegistryScopeMap.Delete" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="DeleteViaIdentity" name="Remove-AzContainerRegistryScopeMap.DeleteViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistryTask.Tests.ps1" executed="True" result="Ignored" success="True" time="0.1931" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistryTask.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-AzContainerRegistryTask" executed="True" result="Ignored" success="True" time="0.0525" asserts="0" description="Remove-AzContainerRegistryTask">
+            <results>
+              <test-case description="Delete" name="Remove-AzContainerRegistryTask.Delete" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="DeleteViaIdentity" name="Remove-AzContainerRegistryTask.DeleteViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistryTaskRun.Tests.ps1" executed="True" result="Ignored" success="True" time="0.1924" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistryTaskRun.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-AzContainerRegistryTaskRun" executed="True" result="Ignored" success="True" time="0.0542" asserts="0" description="Remove-AzContainerRegistryTaskRun">
+            <results>
+              <test-case description="Delete" name="Remove-AzContainerRegistryTaskRun.Delete" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="DeleteViaIdentity" name="Remove-AzContainerRegistryTaskRun.DeleteViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistryToken.Tests.ps1" executed="True" result="Ignored" success="True" time="0.1898" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistryToken.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-AzContainerRegistryToken" executed="True" result="Ignored" success="True" time="0.0542" asserts="0" description="Remove-AzContainerRegistryToken">
+            <results>
+              <test-case description="Delete" name="Remove-AzContainerRegistryToken.Delete" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="DeleteViaIdentity" name="Remove-AzContainerRegistryToken.DeleteViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistryWebhook.Tests.ps1" executed="True" result="Ignored" success="True" time="0.4057" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Remove-AzContainerRegistryWebhook.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Remove-AzContainerRegistryWebhook" executed="True" result="Ignored" success="True" time="0.2643" asserts="0" description="Remove-AzContainerRegistryWebhook">
+            <results>
+              <test-case description="Delete" name="Remove-AzContainerRegistryWebhook.Delete" time="0.2082" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="DeleteViaIdentity" name="Remove-AzContainerRegistryWebhook.DeleteViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Stop-AzContainerRegistryRun.Tests.ps1" executed="True" result="Ignored" success="True" time="0.1935" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Stop-AzContainerRegistryRun.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Stop-AzContainerRegistryRun" executed="True" result="Ignored" success="True" time="0.0527" asserts="0" description="Stop-AzContainerRegistryRun">
+            <results>
+              <test-case description="Cancel" name="Stop-AzContainerRegistryRun.Cancel" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CancelViaIdentity" name="Stop-AzContainerRegistryRun.CancelViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Test-AzContainerRegistryNameAvailability.Tests.ps1" executed="True" result="Ignored" success="True" time="0.3764" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Test-AzContainerRegistryNameAvailability.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Test-AzContainerRegistryNameAvailability" executed="True" result="Ignored" success="True" time="0.24" asserts="0" description="Test-AzContainerRegistryNameAvailability">
+            <results>
+              <test-case description="CheckExpanded" name="Test-AzContainerRegistryNameAvailability.CheckExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Check" name="Test-AzContainerRegistryNameAvailability.Check" time="0.1817" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="CheckViaIdentityExpanded" name="Test-AzContainerRegistryNameAvailability.CheckViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="CheckViaIdentity" name="Test-AzContainerRegistryNameAvailability.CheckViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Test-AzContainerRegistryWebhook.Tests.ps1" executed="True" result="Ignored" success="True" time="0.3931" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Test-AzContainerRegistryWebhook.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Test-AzContainerRegistryWebhook" executed="True" result="Ignored" success="True" time="0.251" asserts="0" description="Test-AzContainerRegistryWebhook">
+            <results>
+              <test-case description="Ping" name="Test-AzContainerRegistryWebhook.Ping" time="0.1986" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="PingViaIdentity" name="Test-AzContainerRegistryWebhook.PingViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Update-AzContainerRegistry.Tests.ps1" executed="True" result="Ignored" success="True" time="0.7778" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Update-AzContainerRegistry.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update-AzContainerRegistry" executed="True" result="Ignored" success="True" time="0.6399" asserts="0" description="Update-AzContainerRegistry">
+            <results>
+              <test-case description="UpdateExpanded" name="Update-AzContainerRegistry.UpdateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Update" name="Update-AzContainerRegistry.Update" time="0.5807" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="UpdateViaIdentityExpanded" name="Update-AzContainerRegistry.UpdateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="UpdateViaIdentity" name="Update-AzContainerRegistry.UpdateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Update-AzContainerRegistryAgentPool.Tests.ps1" executed="True" result="Ignored" success="True" time="0.1923" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Update-AzContainerRegistryAgentPool.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update-AzContainerRegistryAgentPool" executed="True" result="Ignored" success="True" time="0.053" asserts="0" description="Update-AzContainerRegistryAgentPool">
+            <results>
+              <test-case description="UpdateExpanded" name="Update-AzContainerRegistryAgentPool.UpdateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Update" name="Update-AzContainerRegistryAgentPool.Update" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="UpdateViaIdentityExpanded" name="Update-AzContainerRegistryAgentPool.UpdateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="UpdateViaIdentity" name="Update-AzContainerRegistryAgentPool.UpdateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Update-AzContainerRegistryConnectedRegistry.Tests.ps1" executed="True" result="Ignored" success="True" time="0.1933" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Update-AzContainerRegistryConnectedRegistry.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update-AzContainerRegistryConnectedRegistry" executed="True" result="Ignored" success="True" time="0.054" asserts="0" description="Update-AzContainerRegistryConnectedRegistry">
+            <results>
+              <test-case description="UpdateExpanded" name="Update-AzContainerRegistryConnectedRegistry.UpdateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Update" name="Update-AzContainerRegistryConnectedRegistry.Update" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="UpdateViaIdentityExpanded" name="Update-AzContainerRegistryConnectedRegistry.UpdateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="UpdateViaIdentity" name="Update-AzContainerRegistryConnectedRegistry.UpdateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Update-AzContainerRegistryReplication.Tests.ps1" executed="True" result="Ignored" success="True" time="0.3824" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Update-AzContainerRegistryReplication.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update-AzContainerRegistryReplication" executed="True" result="Ignored" success="True" time="0.2406" asserts="0" description="Update-AzContainerRegistryReplication">
+            <results>
+              <test-case description="UpdateExpanded" name="Update-AzContainerRegistryReplication.UpdateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Update" name="Update-AzContainerRegistryReplication.Update" time="0.1852" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="UpdateViaIdentityExpanded" name="Update-AzContainerRegistryReplication.UpdateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="UpdateViaIdentity" name="Update-AzContainerRegistryReplication.UpdateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Update-AzContainerRegistryRun.Tests.ps1" executed="True" result="Ignored" success="True" time="0.2005" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Update-AzContainerRegistryRun.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update-AzContainerRegistryRun" executed="True" result="Ignored" success="True" time="0.0594" asserts="0" description="Update-AzContainerRegistryRun">
+            <results>
+              <test-case description="UpdateExpanded" name="Update-AzContainerRegistryRun.UpdateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Update" name="Update-AzContainerRegistryRun.Update" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="UpdateViaIdentityExpanded" name="Update-AzContainerRegistryRun.UpdateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="UpdateViaIdentity" name="Update-AzContainerRegistryRun.UpdateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Update-AzContainerRegistryScopeMap.Tests.ps1" executed="True" result="Ignored" success="True" time="0.1934" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Update-AzContainerRegistryScopeMap.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update-AzContainerRegistryScopeMap" executed="True" result="Ignored" success="True" time="0.0532" asserts="0" description="Update-AzContainerRegistryScopeMap">
+            <results>
+              <test-case description="UpdateExpanded" name="Update-AzContainerRegistryScopeMap.UpdateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Update" name="Update-AzContainerRegistryScopeMap.Update" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="UpdateViaIdentityExpanded" name="Update-AzContainerRegistryScopeMap.UpdateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="UpdateViaIdentity" name="Update-AzContainerRegistryScopeMap.UpdateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Update-AzContainerRegistryTask.Tests.ps1" executed="True" result="Ignored" success="True" time="0.1929" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Update-AzContainerRegistryTask.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update-AzContainerRegistryTask" executed="True" result="Ignored" success="True" time="0.0543" asserts="0" description="Update-AzContainerRegistryTask">
+            <results>
+              <test-case description="UpdateExpanded" name="Update-AzContainerRegistryTask.UpdateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Update" name="Update-AzContainerRegistryTask.Update" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="UpdateViaIdentityExpanded" name="Update-AzContainerRegistryTask.UpdateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="UpdateViaIdentity" name="Update-AzContainerRegistryTask.UpdateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Update-AzContainerRegistryTaskRun.Tests.ps1" executed="True" result="Ignored" success="True" time="0.1969" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Update-AzContainerRegistryTaskRun.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update-AzContainerRegistryTaskRun" executed="True" result="Ignored" success="True" time="0.0547" asserts="0" description="Update-AzContainerRegistryTaskRun">
+            <results>
+              <test-case description="UpdateExpanded" name="Update-AzContainerRegistryTaskRun.UpdateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Update" name="Update-AzContainerRegistryTaskRun.Update" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="UpdateViaIdentityExpanded" name="Update-AzContainerRegistryTaskRun.UpdateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="UpdateViaIdentity" name="Update-AzContainerRegistryTaskRun.UpdateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Update-AzContainerRegistryToken.Tests.ps1" executed="True" result="Ignored" success="True" time="0.1938" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Update-AzContainerRegistryToken.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update-AzContainerRegistryToken" executed="True" result="Ignored" success="True" time="0.0572" asserts="0" description="Update-AzContainerRegistryToken">
+            <results>
+              <test-case description="UpdateExpanded" name="Update-AzContainerRegistryToken.UpdateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Update" name="Update-AzContainerRegistryToken.Update" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="UpdateViaIdentityExpanded" name="Update-AzContainerRegistryToken.UpdateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="UpdateViaIdentity" name="Update-AzContainerRegistryToken.UpdateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="D:\workspace\azure-powershell\src\ContainerRegistry\test\Update-AzContainerRegistryWebhook.Tests.ps1" executed="True" result="Ignored" success="True" time="0.1967" asserts="0" description="D:\workspace\azure-powershell\src\ContainerRegistry\test\Update-AzContainerRegistryWebhook.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Update-AzContainerRegistryWebhook" executed="True" result="Ignored" success="True" time="0.0582" asserts="0" description="Update-AzContainerRegistryWebhook">
+            <results>
+              <test-case description="UpdateExpanded" name="Update-AzContainerRegistryWebhook.UpdateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Update" name="Update-AzContainerRegistryWebhook.Update" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="UpdateViaIdentityExpanded" name="Update-AzContainerRegistryWebhook.UpdateViaIdentityExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="UpdateViaIdentity" name="Update-AzContainerRegistryWebhook.UpdateViaIdentity" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
