@@ -49,7 +49,7 @@ In this directory, run AutoRest:
 ``` yaml
 branch: 0a2eb0d14f5132fcfd30222d584acf67713332ea
 require:
-  - $(this-folder)/../readme.azure.noprofile.md
+  - $(this-folder)/../../readme.azure.noprofile.md
 # lock the commit
 input-file:
   - https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2022-02-01-preview/containerregistry.json
