@@ -3,5 +3,8 @@
 Remove-AzContainerRegistryImportPipeline -name Exam -RegistryName RegistryExample -ResourceGroupName MyResourceGroup
 ```
 
+```output
+```
+
 Delete a export pipeline
 

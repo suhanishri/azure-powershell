@@ -1,4 +1,4 @@
-### Example 1: {{ Add title here }}
+### Example 1: List Registry token in a registry
 ```powershell
 Get-AzContainerRegistryToken -RegistryName RegistryExample -ResourceGroupName MyResourceGroup
 ```

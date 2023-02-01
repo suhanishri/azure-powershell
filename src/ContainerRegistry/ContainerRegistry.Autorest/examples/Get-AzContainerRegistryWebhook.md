@@ -1,6 +1,6 @@
 ### Example 1: Gets a container registry webhook.
 ```powershell
-get-AzContainerRegistryWebhook  -ResourceGroupName "MyResourceGroup" -RegistryName "RegistryExample" -Name "webhook001"
+Get-AzContainerRegistryWebhook  -ResourceGroupName "MyResourceGroup" -RegistryName "RegistryExample" -Name "webhook001"
 ```
 
 ```output
@@ -13,7 +13,7 @@ Gets a container registry webhook.
 
 ### Example 2: Get all the webhooks of a container registry
 ```powershell
-get-AzContainerRegistryWebhook  -ResourceGroupName "MyResourceGroup" -RegistryName "RegistryExample"
+Get-AzContainerRegistryWebhook  -ResourceGroupName "MyResourceGroup" -RegistryName "RegistryExample"
 
 ```
 

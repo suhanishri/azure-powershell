@@ -1,4 +1,4 @@
-### Example 1: {{ Add title here }}
+### Example 1: Creates a container registry replication.
 ```powershell
  New-AzContainerRegistryReplication -ResourceGroupName "MyResourceGroup" -RegistryName "RegistryExample" -Name replication001 -Location 'west us' -Tag @{tagName='MyTag'}
 ```

@@ -1,6 +1,6 @@
 ### Example 1: Updates an agent pool with the specified parameters
 ```powershell
- update-AzContainerRegistryAgentPool -AgentPoolName agent -RegistryName RegistryExample -ResourceGroupName MyResourceGroup -Count 5
+Update-AzContainerRegistryAgentPool -AgentPoolName agent -RegistryName RegistryExample -ResourceGroupName MyResourceGroup -Count 5
 ```
 
 ```output
