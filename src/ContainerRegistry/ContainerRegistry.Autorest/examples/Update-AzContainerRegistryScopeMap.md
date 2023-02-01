@@ -1,7 +1,6 @@
 ### Example 1: Update action for a scope map
 ```powershell
 Update-AzContainerRegistryScopeMap -Name newmap -RegistryName RegistryExample -ResourceGroupName MyResourceGroup -Action "repositories/busybox/content/read"
-
 ```
 
 ```output

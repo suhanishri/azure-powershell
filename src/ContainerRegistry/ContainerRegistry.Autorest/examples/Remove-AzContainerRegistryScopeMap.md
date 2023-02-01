@@ -1,6 +1,6 @@
 ### Example 1: Remove a scope map for a container registry
 ```powershell
-Remove-azContainerRegistryScopeMap -Name newmap -RegistryName RegistryExample -ResourceGroupName MyResourceGroup 
+Remove-AzContainerRegistryScopeMap -Name newmap -RegistryName RegistryExample -ResourceGroupName MyResourceGroup 
 ```
 
 ```output
