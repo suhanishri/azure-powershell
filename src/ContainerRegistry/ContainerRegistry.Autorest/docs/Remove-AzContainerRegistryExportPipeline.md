@@ -30,27 +30,12 @@ Deletes an export pipeline from a container registry.
 
 ## EXAMPLES
 
-### Example 1: {{ Add title here }}
+### Example 1: Delete a export pipeline
 ```powershell
-{{ Add code here }}
+Remove-AzContainerRegistryExportPipeline -name Exam -RegistryName RegistryExample -ResourceGroupName MyResourceGroup
 ```
 
-```output
-{{ Add output here }}
-```
-
-{{ Add description here }}
-
-### Example 2: {{ Add title here }}
-```powershell
-{{ Add code here }}
-```
-
-```output
-{{ Add output here }}
-```
-
-{{ Add description here }}
+Delete a export pipeline
 
 ## PARAMETERS
 

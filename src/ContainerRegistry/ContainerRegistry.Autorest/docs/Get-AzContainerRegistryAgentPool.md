@@ -37,14 +37,13 @@ Gets the detailed information for a given agent pool.
 
 ### Example 1: Get the agent pool of an registry
 ```powershell
-Get-AzContainerRegistryAgentPool -RegistryName RegistryExample1 -ResourceGroupName MyResourceGroup
+Get-AzContainerRegistryAgentPool -RegistryName RegistryExample -ResourceGroupName MyResourceGroup
 ```
 
 ```output
-Location Name  SystemDataCreatedAt   SystemDataCreatedBy       SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModi
-                                                                                                                fiedBy
--------- ----  -------------------   -------------------       ----------------------- ------------------------ ------------------
-eastus   agent 30/01/2023 7:39:39 am user@microsoft.com        User                    30/01/2023 7:39:39 am    user@micro…
+Name  Location OS    Count ProvisioningState
+----  -------- --    ----- -----------------
+agent eastus   Linux 5     Succeeded
 ```
 
 Get the agent pool of an registry

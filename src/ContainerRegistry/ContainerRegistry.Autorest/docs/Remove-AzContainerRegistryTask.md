@@ -30,16 +30,12 @@ Deletes a specified task.
 
 ## EXAMPLES
 
-### Example 1: {{ Add title here }}
+### Example 1: Deletes a specified task.
 ```powershell
-{{ Add code here }}
+ remove-AzContainerRegistryTask -TaskName quicktask  -RegistryName RegistryExample -ResourceGroupName MyResourceGroup
 ```
 
-```output
-{{ Add output here }}
-```
-
-{{ Add description here }}
+Deletes a specified task.
 
 ### Example 2: {{ Add title here }}
 ```powershell

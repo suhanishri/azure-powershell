@@ -31,7 +31,7 @@ Get the upload location for the user to be able to upload the source.
 
 ### Example 1: Get the upload location for the user to be able to upload the source.
 ```powershell
-Get-AzContainerRegistryBuildSourceUploadUrl -RegistryName RegistryExample1 -ResourceGroupName MyResourceGroup
+Get-AzContainerRegistryBuildSourceUploadUrl -RegistryName RegistryExample -ResourceGroupName MyResourceGroup
 ```
 
 ```output

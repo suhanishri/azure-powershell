@@ -47,14 +47,13 @@ Creates an agent pool for a container registry with the specified parameters.
 
 ### Example 1: Creates an agent pool for a container registry with the specified parameters.
 ```powershell
-New-AzContainerRegistryAgentPool -name agent  -RegistryName RegistryExample1 -ResourceGroupName MyResourceGroup -Location 'eastus' -Count 1 -Tier S1 -os 'Linux'
+New-AzContainerRegistryAgentPool -name agent  -RegistryName RegistryExample -ResourceGroupName MyResourceGroup -Location 'eastus' -Count 1 -Tier S1 -os 'Linux'
 ```
 
 ```
-Location Name  SystemDataCreatedAt   SystemDataCreatedBy       SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModi
-                                                                                                                fiedBy
--------- ----  -------------------   -------------------       ----------------------- ------------------------ ------------------
-eastus   agent 30/01/2023 7:39:39 am nanxiangliu@microsoft.com User                    30/01/2023 7:39:39 am    nanxiangliu@micro…output
+Name  Location OS    Count ProvisioningState
+----  -------- --    ----- -----------------
+agent eastus   Linux 1     Succeeded
 
 ```
 

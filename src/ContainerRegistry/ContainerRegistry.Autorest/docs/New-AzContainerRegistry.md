@@ -66,26 +66,26 @@ Creates a container registry with the specified parameters.
 
 ### Example 1: Create a container registry with a new storage account.
 ```powershell
- New-AzContainerRegistry -ResourceGroupName "MyResourceGroup" -Name "RegistryExample1" -Sku "Basic" -Location "west us"
+ New-AzContainerRegistry -ResourceGroupName "MyResourceGroup" -Name "RegistryExample" -Sku "Basic" -Location "west us"
 ```
 
 ```output
 Name             SkuName LoginServer                 CreationDate         ProvisioningState AdminUserEnabled
 ----             ------- -----------                 ------------         ----------------- ----------------
-RegistryExample1 Basic   registryexample1.azurecr.io 1/19/2023 6:10:49 AM Succeeded         False
+RegistryExample Basic   registryexample.azurecr.io 1/19/2023 6:10:49 AM Succeeded         False
 ```
 
 Create a container registry with a new storage account.
 
 ### Example 2: Create a container registry with admin user enabled.
 ```powershell
- New-AzContainerRegistry -ResourceGroupName "MyResourceGroup" -Name "RegistryExample1" -Sku "Basic" -Location "west us" -AdminUserEnabled
+ New-AzContainerRegistry -ResourceGroupName "MyResourceGroup" -Name "RegistryExample" -Sku "Basic" -Location "west us" -AdminUserEnabled
 ```
 
 ```output
 Name             SkuName LoginServer                 CreationDate         ProvisioningState AdminUserEnabled
 ----             ------- -----------                 ------------         ----------------- ----------------
-RegistryExample1 Basic   registryexample1.azurecr.io 1/19/2023 6:10:49 AM Succeeded         True
+RegistryExample Basic   registryexample.azurecr.io 1/19/2023 6:10:49 AM Succeeded         True
 ```
 
 Create a container registry with admin user enabled.

@@ -65,27 +65,19 @@ Updates a task with the specified parameters.
 
 ## EXAMPLES
 
-### Example 1: {{ Add title here }}
+### Example 1: Updates a task with the specified parameters.
 ```powershell
-{{ Add code here }}
+update-AzContainerRegistryTask -TaskName quicktask  -RegistryName RegistryExample -ResourceGroupName MyResourceGroup -Status 'Enabled'
 ```
 
 ```output
-{{ Add output here }}
+Location Name      SystemDataCreatedAt   SystemDataCreatedBy       SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLast
+                                                                                                                    ModifiedBy
+-------- ----      -------------------   -------------------       ----------------------- ------------------------ --------------
+eastus   quicktask 29/01/2023 8:34:07 pm nanxiangliu@microsoft.com User                    30/01/2023 7:58:33 pm    nanxiangliu@m…
 ```
 
-{{ Add description here }}
-
-### Example 2: {{ Add title here }}
-```powershell
-{{ Add code here }}
-```
-
-```output
-{{ Add output here }}
-```
-
-{{ Add description here }}
+Updates a task with the specified parameters.
 
 ## PARAMETERS
 

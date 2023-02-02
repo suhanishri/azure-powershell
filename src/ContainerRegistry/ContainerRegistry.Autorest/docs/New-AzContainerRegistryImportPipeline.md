@@ -53,7 +53,7 @@ Creates an import pipeline for a container registry with the specified parameter
 
 ### Example 1: Create a new import pipeline
 ```powershell
-New-AzContainerRegistryExportPipeline -name Exam -RegistryName RegistryExample1 -ResourceGroupName MyResourceGroup -IdentityType 'SystemAssigned' -SourceType AzureStorageBlobContainer -SourceUri https://sa.blob.core.windows.net/public/ -SourceKeyVaultUri https://examplekeyvault.vault.azure.net/secrets/test/18d55a35beba4b20bdd044a2a9d14c30
+New-AzContainerRegistryExportPipeline -name Exam -RegistryName RegistryExample -ResourceGroupName MyResourceGroup -IdentityType 'SystemAssigned' -SourceType AzureStorageBlobContainer -SourceUri https://sa.blob.core.windows.net/public/ -SourceKeyVaultUri https://examplekeyvault.vault.azure.net/secrets/test/18d55a35beba4b20bdd044a2a9d14c30
 ```
 
 ```output

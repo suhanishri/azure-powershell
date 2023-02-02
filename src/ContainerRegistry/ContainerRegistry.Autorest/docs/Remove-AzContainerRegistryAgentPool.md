@@ -30,16 +30,12 @@ Deletes a specified agent pool resource.
 
 ## EXAMPLES
 
-### Example 1: Deletes a specified agent pool resource.
+### Example 1: Delete a specified agent pool resource.
 ```powershell
-{{ Add code here }}
+Remove-AzContainerRegistryAgentPool -Name agentpool -RegistryName RegistryExample -ResourceGroupName MyResourceGroup
 ```
 
-```output
-{{ Add output here }}
-```
-
-Deletes a specified agent pool resource.
+Delete a specified agent pool resource.
 
 ## PARAMETERS
 

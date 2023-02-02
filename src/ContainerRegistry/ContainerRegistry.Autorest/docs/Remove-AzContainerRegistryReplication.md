@@ -30,27 +30,12 @@ Deletes a replication from a container registry.
 
 ## EXAMPLES
 
-### Example 1: {{ Add title here }}
+### Example 1: Deletes a replication from a container registry.
 ```powershell
-{{ Add code here }}
+Remove-AzContainerRegistryReplication -Name "NewReplication" -ResourceGroupName "MyResourceGroup" -RegistryName "RegistryExample"
 ```
 
-```output
-{{ Add output here }}
-```
-
-{{ Add description here }}
-
-### Example 2: {{ Add title here }}
-```powershell
-{{ Add code here }}
-```
-
-```output
-{{ Add output here }}
-```
-
-{{ Add description here }}
+Deletes a replication from a container registry.
 
 ## PARAMETERS
 

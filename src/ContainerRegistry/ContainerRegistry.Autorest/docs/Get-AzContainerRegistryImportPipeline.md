@@ -37,7 +37,7 @@ Gets the properties of the import pipeline.
 
 ### Example 1: Lists all import pipelines for the specified container registry.
 ```powershell
-Get-AzContainerRegistryImportPipeline -RegistryName RegistryExample1 -ResourceGroupName MyResourceGroup
+Get-AzContainerRegistryImportPipeline -RegistryName RegistryExample -ResourceGroupName MyResourceGroup
 ```
 
 ```output

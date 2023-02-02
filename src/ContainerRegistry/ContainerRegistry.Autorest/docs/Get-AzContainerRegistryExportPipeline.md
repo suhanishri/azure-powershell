@@ -37,7 +37,7 @@ Gets the properties of the export pipeline.
 
 ### Example 1: Lists all export pipelines for the specified container registry.
 ```powershell
-Get-AzContainerRegistryExportPipeline -RegistryName RegistryExample1 -ResourceGroupName MyResourceGroup
+Get-AzContainerRegistryExportPipeline -RegistryName RegistryExample -ResourceGroupName MyResourceGroup
 ```
 
 ```output

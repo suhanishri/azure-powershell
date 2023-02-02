@@ -37,7 +37,7 @@ Get the properties of a specified task.
 
 ### Example 1: List registry tasks of a container registry
 ```powershell
-Get-AzContainerRegistryTask  -RegistryName RegistryExample1 -ResourceGroupName MyResourceGroup
+Get-AzContainerRegistryTask  -RegistryName RegistryExample -ResourceGroupName MyResourceGroup
 ```
 
 ```output

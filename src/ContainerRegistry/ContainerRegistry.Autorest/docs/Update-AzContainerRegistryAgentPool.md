@@ -46,25 +46,16 @@ Updates an agent pool with the specified parameters.
 
 ### Example 1: Updates an agent pool with the specified parameters
 ```powershell
- update-AzContainerRegistryAgentPool -AgentPoolName agent -RegistryName RegistryExample1 -ResourceGroupName MyResourceGroup -Count 5
+ update-AzContainerRegistryAgentPool -AgentPoolName agent -RegistryName RegistryExample -ResourceGroupName MyResourceGroup -Count 5
 ```
 
 ```output
-{{ Add output here }}
+Name  Location OS    Count ProvisioningState
+----  -------- --    ----- -----------------
+agent eastus   Linux 5     Succeeded
 ```
 
 Updates an agent pool with the specified parameters
-
-### Example 2: {{ Add title here }}
-```powershell
-{{ Add code here }}
-```
-
-```output
-{{ Add output here }}
-```
-
-{{ Add description here }}
 
 ## PARAMETERS
 

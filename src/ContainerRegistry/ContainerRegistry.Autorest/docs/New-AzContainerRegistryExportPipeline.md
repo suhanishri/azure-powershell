@@ -51,7 +51,7 @@ Creates an export pipeline for a container registry with the specified parameter
 
 ### Example 1: Create a new export pipeline
 ```powershell
-New-AzContainerRegistryExportPipeline -name Exam -RegistryName RegistryExample1 -ResourceGroupName MyResourceGroup -IdentityType 'SystemAssigned' -TargetType AzureStorageBlobContainer -TargetUri https://sa.blob.core.windows.net/public/ -TargetKeyVaultUri https://examplekeyvault.vault.azure.net/secrets/test/18d55a35beba4b20bdd044a2a9d14c30
+New-AzContainerRegistryExportPipeline -name Exam -RegistryName RegistryExample -ResourceGroupName MyResourceGroup -IdentityType 'SystemAssigned' -TargetType AzureStorageBlobContainer -TargetUri https://sa.blob.core.windows.net/public/ -TargetKeyVaultUri https://examplekeyvault.vault.azure.net/secrets/test/18d55a35beba4b20bdd044a2a9d14c30
 ```
 
 ```output

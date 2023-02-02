@@ -31,7 +31,7 @@ Returns a task with extended information that includes all secrets.
 
 ### Example 1: Returns a task with extended information that includes all secrets.
 ```powershell
-Get-AzContainerRegistryTask  -RegistryName RegistryExample1 -ResourceGroupName MyResourceGroup -TaskName quicktask
+Get-AzContainerRegistryTask  -RegistryName RegistryExample -ResourceGroupName MyResourceGroup -TaskName quicktask
 ```
 
 ```output
