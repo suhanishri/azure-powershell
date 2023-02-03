@@ -14,21 +14,9 @@
 param (
     [Parameter(Mandatory)]
     [ValidateNotNullOrEmpty()]
-    [string] $ModuleName,
+    [string] $Module,
 
     [Parameter(Mandatory)]
-    [ValidateNotNullOrEmpty()]
-    [string] $BuildId,
-
-    [Parameter(Mandatory)]
-    [ValidateNotNullOrEmpty()]
-    [string] $OSVersion,
-
-    [Parameter(Mandatory)]
-    [ValidateNotNullOrEmpty()]
-    [string] $PSVersion,
-
-    [Parameter()]
     [ValidateScript({ Test-Path -LiteralPath $_ -PathType Container })]
     [string] $DataLocation
 )
@@ -43,9 +31,10 @@ New-Variable -Name ScenarioMaxRetryCount -Value 3 -Scope Script -Option Constant
 New-Variable -Name ScenarioMaxDelay -Value 20 -Scope Script -Option Constant
 New-Variable -Name ScenarioDelay -Value 5 -Scope Script -Option Constant
 
+New-Variable -Name ModuleName -Value $Module -Scope Script -Option Constant
 New-Variable -Name LiveTestAnalysisDirectory -Value (Join-Path -Path $DataLocation -ChildPath "LiveTestAnalysis") -Scope Script -Option Constant
 New-Variable -Name LiveTestRawDirectory -Value (Join-Path -Path $script:LiveTestAnalysisDirectory -ChildPath "Raw") -Scope Script -Option Constant
-New-Variable -Name LiveTestRawCsvFile -Value (Join-Path -Path $script:LiveTestRawDirectory -ChildPath "Az.$ModuleName.csv") -Scope Script -Option Constant
+New-Variable -Name LiveTestRawCsvFile -Value (Join-Path -Path $script:LiveTestRawDirectory -ChildPath "Az.$script:ModuleName.csv") -Scope Script -Option Constant
 
 function InitializeLiveTestModule {
     [CmdletBinding()]
@@ -56,7 +45,7 @@ function InitializeLiveTestModule {
         New-Item -Path $script:LiveTestRawDirectory -ItemType Directory -Force
     }
 
-    ({} | Select-Object "Source", "BuildId", "OSVersion", "PSVersion", "Module", "Name", "Description", "StartDateTime", "EndDateTime", "IsSuccess", "Errors" | ConvertTo-Csv -NoTypeInformation)[0] | Out-File -LiteralPath $script:LiveTestRawCsvFile -Encoding utf8 -Force
+    ({} | Select-Object "Name", "Description", "StartDateTime", "EndDateTime", "IsSuccess", "Errors" | ConvertTo-Csv -NoTypeInformation)[0] | Out-File -LiteralPath $script:LiveTestRawCsvFile -Encoding utf8 -Force
 }
 
 function New-LiveTestRandomName {
@@ -192,18 +181,13 @@ function Invoke-LiveTestScenario {
     )
 
     if (!(Test-Path -LiteralPath $script:LiveTestRawCsvFile -PathType Leaf -ErrorAction SilentlyContinue)) {
-        throw "Error occurred when initializing live tests. The csv file was not found."
+        Initialize-LiveTestModule
     }
 
     Write-Host "##[group]Start to execute the live scenario `"$Name`"." -ForegroundColor Green
 
     try {
         $snrCsvData = [PSCustomObject]@{
-            Source        = "LiveTest"
-            BuildId       = $BuildId
-            OSVersion     = $OSVersion
-            PSVersion     = $PSVersion
-            Module        = $ModuleName
             Name          = $Name
             Description   = $Description
             StartDateTime = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss")
@@ -283,6 +267,9 @@ function Invoke-LiveTestScenario {
         $snrCsvData.Errors = ConvertToLiveTestJsonErrors -Errors $snrErrorMessage
     }
     finally {
+        $snrCsvData.EndDateTime = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss")
+        $snrCsvData | Export-Csv -LiteralPath $script:LiveTestRawCsvFile -Encoding utf8 -NoTypeInformation -Append
+
         if ($null -ne $snrResourceGroup) {
             try {
                 Write-Host "##[section]Start to clean up the resource group `"$snrResourceGroupName`"." -ForegroundColor Green
@@ -292,8 +279,6 @@ function Invoke-LiveTestScenario {
                 # Ignore exception for clean up
             }
         }
-        $snrCsvData.EndDateTime = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss")
-        $snrCsvData | Export-Csv -LiteralPath $script:LiveTestRawCsvFile -Encoding utf8 -NoTypeInformation -Append
 
         Write-Host "##[endgroup]"
     }
@@ -308,7 +293,7 @@ function Clear-LiveTestResources {
         [string] $Name
     )
 
-    Invoke-LiveTestCommand -Command "Remove-AzResourceGroup -Name $Name -Force"
+    Invoke-LiveTestCommand -Command "Remove-AzResourceGroup -Name $Name -Force -AsJob"
 }
 
 function ConvertToLiveTestJsonErrors {
