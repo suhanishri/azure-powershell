@@ -31,7 +31,7 @@ Copyright = 'Microsoft Corporation. All rights reserved.'
 
 # Description of the functionality provided by this module
 Description = 'Microsoft Azure PowerShell - Including stable version and preview version of Azure PowerShell modules. This module is compatible with PowerShell and Windows PowerShell.
-For more information about the AzPreview module, please visit the following: https://docs.microsoft.com/powershell/azure/'
+For more information about the AzPreview module, please visit the following: https://learn.microsoft.com/powershell/azure/'
 
 # Minimum version of the PowerShell engine required by this module
 PowerShellVersion = '5.1'
@@ -52,7 +52,7 @@ DotNetFrameworkVersion = '4.7.2'
 # ProcessorArchitecture = ''
 
 # Modules that must be imported into the global environment prior to importing this module
-RequiredModules = @(@{ModuleName = 'Az.Accounts'; ModuleVersion = '2.11.0'; }, 
+RequiredModules = @(@{ModuleName = 'Az.Accounts'; ModuleVersion = '2.11.1'; }, 
             @{ModuleName = 'Az.ADDomainServices'; RequiredVersion = '0.2.0'; }, 
             @{ModuleName = 'Az.Advisor'; RequiredVersion = '2.0.0'; }, 
             @{ModuleName = 'Az.Aks'; RequiredVersion = '5.2.0'; }, 
@@ -68,6 +68,7 @@ RequiredModules = @(@{ModuleName = 'Az.Accounts'; ModuleVersion = '2.11.0'; },
             @{ModuleName = 'Az.BareMetal'; RequiredVersion = '0.1.0'; }, 
             @{ModuleName = 'Az.Batch'; RequiredVersion = '3.3.0'; }, 
             @{ModuleName = 'Az.Billing'; RequiredVersion = '2.0.0'; }, 
+            @{ModuleName = 'Az.BillingBenefits'; RequiredVersion = '0.1.0'; }, 
             @{ModuleName = 'Az.Blueprint'; RequiredVersion = '0.4.2'; }, 
             @{ModuleName = 'Az.BotService'; RequiredVersion = '0.5.0'; }, 
             @{ModuleName = 'Az.Cdn'; RequiredVersion = '2.1.0'; }, 
@@ -132,6 +133,7 @@ RequiredModules = @(@{ModuleName = 'Az.Accounts'; ModuleVersion = '2.11.0'; },
             @{ModuleName = 'Az.KubernetesConfiguration'; RequiredVersion = '0.6.0'; }, 
             @{ModuleName = 'Az.Kusto'; RequiredVersion = '2.1.0'; }, 
             @{ModuleName = 'Az.LabServices'; RequiredVersion = '0.1.0'; }, 
+            @{ModuleName = 'Az.LoadTesting'; RequiredVersion = '0.1.0'; }, 
             @{ModuleName = 'Az.LogicApp'; RequiredVersion = '1.5.0'; }, 
             @{ModuleName = 'Az.Logz'; RequiredVersion = '0.1.0'; }, 
             @{ModuleName = 'Az.MachineLearning'; RequiredVersion = '1.1.3'; }, 
