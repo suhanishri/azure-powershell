@@ -14,40 +14,6 @@
 $script:AzPSCommonParameters = @("-Break", "-Confirm", "-Debug", "-DefaultProfile", "-ErrorAction", "-ErrorVariable", "-HttpPipelineAppend", "-HttpPipelinePrepend", "-InformationAction", "-InformationVariable",
     "-OutBuffer", "-OutVariable", "-PassThru", "-PipelineVariable", "-Proxy", "-ProxyCredential", "-ProxyUseDefaultCredentials", "-Verbose", "-WarningAction", "-WarningVariable", "-WhatIf")
 
-function Get-TestCoverageModuleDetails {
-    [CmdletBinding()]
-    [OutputType([hashtable])]
-    param (
-        [Parameter(Mandatory)]
-        [ValidateNotNull()]
-        $Module
-    )
-
-    [hashtable] $ModuleDetails = @{}
-
-    $Module
-    $moduleCommands = $Module.ExportedCmdlets.Keys + $Module.ExportedFunctions.Keys
-    $totalCommands = $moduleCommands.Count
-    $moduleCommands
-
-    $totalParameterSets = 0
-    $totalParameters = 0
-    $moduleCommands | ForEach-Object {
-        $command = Get-Command -Name $_
-        $totalParameterSets += $command.ParameterSets.Count
-
-        $commandParams = $command.Parameters
-        $commandParams.Keys | ForEach-Object {
-            if ($_ -notin $script:AzPSCommonParameters) {
-                $totalParameters += $commandParams[$_].ParameterSets.Count
-            }
-        }
-    }
-
-    $ModuleDetails = @{ TotalCommands = $totalCommands; TotalParameterSets = $totalParameterSets; TotalParameters = $totalParameters }
-    $ModuleDetails
-}
-
 function Add-TestCoverageAdditionalInfo {
     [CmdletBinding()]
     param (
@@ -76,20 +42,12 @@ function Add-TestCoverageAdditionalInfo {
         $moduleName = (Get-Item -Path $_).BaseName
         $simpleModuleName = $moduleName.Substring(3)
         $module = Get-Module -Name $moduleName
-        Write-Host "Print loaded modules:"
-        Get-Module
-        $module | fl
         if ($null -eq $module) {
-            Write-Host "Module $moduleName is null. Getting list available modules."
-            Write-Host "Print list available modules:"
-            Get-Module -ListAvailable
             $module = Get-Module -Name $moduleName -ListAvailable
-            $module | fl
         }
 
         $moduleCommands = $module.ExportedCmdlets.Keys + $module.ExportedFunctions.Keys
         $totalCommands = $moduleCommands.Count
-        $moduleCommands
 
         $totalParameterSets = 0
         $totalParameters = 0
