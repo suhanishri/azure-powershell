@@ -47,13 +47,13 @@ In this directory, run AutoRest:
 > see https://aka.ms/autorest
 
 ``` yaml
-branch: 0a2eb0d14f5132fcfd30222d584acf67713332ea
+branch: 891dd18a70057c2fee388573117683e6d0081bda
 require:
   - $(this-folder)/../../readme.azure.noprofile.md
 # lock the commit
 input-file:
-  - https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2022-02-01-preview/containerregistry.json
-  - https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2019-06-01-preview/containerregistry_build.json
+  - https://github.com/Azure/azure-rest-api-specs/blob/66174681c09b101de03fd35399080cfbccc93e8f/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2023-01-01-preview/containerregistry.json
+  - https://github.com/Azure/azure-rest-api-specs/blob/66174681c09b101de03fd35399080cfbccc93e8f/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2019-06-01-preview/containerregistry_build.json
 module-version: 0.1.0
 title: ContainerRegistry
 subject-prefix: $(service-name)
@@ -164,5 +164,5 @@ directive:
     subject: RegistryCredentials
   hide: true
 - where:
-    subject: (.*)(Run)(.*)
+    subject: (.*)(Run)
   hide: true
