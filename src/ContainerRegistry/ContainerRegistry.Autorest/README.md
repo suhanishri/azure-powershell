@@ -63,10 +63,41 @@ resourcegroup-append: true
 nested-object-to-string: true
 
 directive:
+# Remove cmdlet, Private link related resource should be ignored. 
+- where:
+    subject: RegistryPrivateLinkResource
+  hide: true
+# Remove the unexpanded parameter set
+- where:
+    variant: ^Create$|^CreateViaIdentityExpanded$|^Update$|^UpdateViaIdentity$|^CreateViaIdentity$|^ImportViaIdentity$|^ImportViaIdentityExpanded$|^CheckViaIdentity$|^CheckViaIdentityExpanded$|^PingViaIdentity$|^Check$|^RegenerateViaIdentity$
+  remove: true
+- where:
+    subject: PrivateEndpointConnection
+  hide: true
+- where:
+    subject: (.*)ConnectedRegistry
+  hide: true
+- where:
+    verb: New
+    subject: RegistryCredentials
+  hide: true
+- where:
+    subject: (.*)(Run)
+  hide: true
+- where:
+    verb: update
+    subject: Replication 
+  hide: true
+
 - where:
     verb: Ping
   set: 
     verb: Test
+- where:
+    verb: New
+    subject: RegistryCredential
+  set:
+    verb: Update
 - model-cmdlet:
     - IPRule
 - where:
@@ -75,14 +106,102 @@ directive:
   set:
     subject: RegistryCredential
 - where:
-    subject: PrivateEndpointConnection
-  hide: true
+    parameter-name: AdminUserEnabled
+  set:
+    parameter-name: EnableAdminUser
 - where:
-    subject: RegistryPrivateLinkResource
-  hide: true
+    parameter-name: SkuName
+  set:
+    parameter-name: Sku
+
+    
 - where:
-    subject: (.*)ConnectedRegistry
-  hide: true
+    parameter-name: ServiceUri
+  set:
+    alias: Uri
+- where:
+    parameter-name: Tag
+  set:
+    alias: Tags
+- where:
+    parameter-name: CustomHeader
+  set:
+    alias: Header
+- where:
+    verb: Get
+    subject: RegistryCredential|RegistryUsage
+    parameter-name: RegistryName
+  set:
+    alias: Name
+- where:
+    verb: Get
+    subject: Replication
+    parameter-name: Name
+  set:
+    alias: 
+    - ResourceName
+    - ReplicationName
+- where:
+    subject: Replication|Webhook|WebhookEvent
+    parameter-name: RegistryName
+  set:
+    alias: ContainerRegistryName
+- where:
+    subject: Webhook
+    parameter-name: Name
+  set:
+    alias: 
+    - WebhookName
+    - ResourceName
+- where:
+    subject: Registry
+    parameter-name: Name
+  set:
+    alias: 
+    - RegistryName
+    - ResourceName
+    - ContainerRegistryName
+
+- where:
+    subject: Replication
+    parameter-name: Location
+  set:
+    alias: ReplicationLocation
+- where:
+    subject: Replication
+    parameter-name: Name
+  set:
+    alias: 
+    - ReplicationName
+    - ResourceName
+- where:
+    model-name: Webhook
+  set:
+    format-table: 
+      properties:
+        - Name
+        - Location
+        - Status
+        - Scope
+        - Actions
+        - ProvisioningState
+- where:
+    model-name: Event
+  set:
+    format-table: 
+      properties:
+        - ID
+        - ContentAction
+        - ContentTimestamp
+        - ResponseMessageStatusCode
+- where:
+    model-name: ScopeMap
+  set:
+    format-table: 
+      properties:
+        - Name
+        - Action
+        - Type
 - where:
     model-name: Registry
   set:
@@ -114,55 +233,3 @@ directive:
         - OS
         - Count
         - ProvisioningState
-- where:
-    parameter-name: ServiceUri
-  set:
-    alias: Uri
-- where:
-    parameter-name: CustomHeader
-  set:
-    alias: Header
-- where:
-    model-name: Webhook
-  set:
-    format-table: 
-      properties:
-        - Name
-        - Location
-        - Status
-        - Scope
-        - Actions
-        - ProvisioningState
-- where:
-    model-name: Event
-  set:
-    format-table: 
-      properties:
-        - ID
-        - ContentAction
-        - ContentTimestamp
-        - ResponseMessageStatusCode
-- where:
-    model-name: ScopeMap
-  set:
-    format-table: 
-      properties:
-        - Name
-        - Action
-        - Type
-- where:
-    verb: update
-    subject: Replication 
-  hide: true
-- where:
-    verb: New
-    subject: RegistryCredential
-  set:
-    verb: Update
-- where:
-    verb: New
-    subject: RegistryCredentials
-  hide: true
-- where:
-    subject: (.*)(Run)
-  hide: true
