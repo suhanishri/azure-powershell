@@ -233,3 +233,21 @@ directive:
         - OS
         - Count
         - ProvisioningState
+
+# custom hide
+- where:
+    verb: Get
+    subject: RegistryCredential|Replication|WebhookEvent|Webhook
+  hide: true
+- where:
+    verb: New
+    subject: Replication|Webhook
+  hide: true
+- where:
+    verb: Test
+    subject: Webhook
+  hide: true  
+- where:
+    verb: Update
+    subject: RegistryCredential
+  hide: true  
