@@ -23,8 +23,14 @@ Gets the count of queued runs for a given agent pool.
 ### [Get-AzContainerRegistryBuildSourceUploadUrl](Get-AzContainerRegistryBuildSourceUploadUrl.md)
 Get the upload location for the user to be able to upload the source.
 
+### [Get-AzContainerRegistryCacheRule](Get-AzContainerRegistryCacheRule.md)
+Gets the properties of the specified cache rule resource.
+
 ### [Get-AzContainerRegistryCredential](Get-AzContainerRegistryCredential.md)
 Lists the login credentials for the specified container registry.
+
+### [Get-AzContainerRegistryCredentialSet](Get-AzContainerRegistryCredentialSet.md)
+Gets the properties of the specified credential set resource.
 
 ### [Get-AzContainerRegistryExportPipeline](Get-AzContainerRegistryExportPipeline.md)
 Gets the properties of the export pipeline.
@@ -53,9 +59,6 @@ Gets the quota usages for the specified container registry.
 ### [Get-AzContainerRegistryWebhook](Get-AzContainerRegistryWebhook.md)
 Gets the properties of the specified webhook.
 
-### [Get-AzContainerRegistryWebhookCallbackConfig](Get-AzContainerRegistryWebhookCallbackConfig.md)
-Gets the configuration of service URI and custom headers for the webhook.
-
 ### [Get-AzContainerRegistryWebhookEvent](Get-AzContainerRegistryWebhookEvent.md)
 Lists recent events for the specified webhook.
 
@@ -67,6 +70,12 @@ Creates a container registry with the specified parameters.
 
 ### [New-AzContainerRegistryAgentPool](New-AzContainerRegistryAgentPool.md)
 Creates an agent pool for a container registry with the specified parameters.
+
+### [New-AzContainerRegistryCacheRule](New-AzContainerRegistryCacheRule.md)
+Creates a cache rule for a container registry with the specified parameters.
+
+### [New-AzContainerRegistryCredentialSet](New-AzContainerRegistryCredentialSet.md)
+Creates a credential set for a container registry with the specified parameters.
 
 ### [New-AzContainerRegistryExportPipeline](New-AzContainerRegistryExportPipeline.md)
 Creates an export pipeline for a container registry with the specified parameters.
@@ -97,6 +106,12 @@ Deletes a container registry.
 
 ### [Remove-AzContainerRegistryAgentPool](Remove-AzContainerRegistryAgentPool.md)
 Deletes a specified agent pool resource.
+
+### [Remove-AzContainerRegistryCacheRule](Remove-AzContainerRegistryCacheRule.md)
+Deletes a cache rule resource from a container registry.
+
+### [Remove-AzContainerRegistryCredentialSet](Remove-AzContainerRegistryCredentialSet.md)
+Deletes a credential set from a container registry.
 
 ### [Remove-AzContainerRegistryExportPipeline](Remove-AzContainerRegistryExportPipeline.md)
 Deletes an export pipeline from a container registry.
@@ -132,8 +147,14 @@ Updates a container registry with the specified parameters.
 ### [Update-AzContainerRegistryAgentPool](Update-AzContainerRegistryAgentPool.md)
 Updates an agent pool with the specified parameters.
 
+### [Update-AzContainerRegistryCacheRule](Update-AzContainerRegistryCacheRule.md)
+Updates a cache rule for a container registry with the specified parameters.
+
 ### [Update-AzContainerRegistryCredential](Update-AzContainerRegistryCredential.md)
 Regenerates one of the login credentials for the specified container registry.
+
+### [Update-AzContainerRegistryCredentialSet](Update-AzContainerRegistryCredentialSet.md)
+Updates a credential set for a container registry with the specified parameters.
 
 ### [Update-AzContainerRegistryScopeMap](Update-AzContainerRegistryScopeMap.md)
 Updates a scope map with the specified parameters.

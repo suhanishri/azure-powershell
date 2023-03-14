@@ -12,31 +12,10 @@ Creates a scope map for a container registry with the specified parameters.
 
 ## SYNTAX
 
-### CreateExpanded (Default)
 ```
 New-AzContainerRegistryScopeMap -Name <String> -RegistryName <String> -ResourceGroupName <String>
  [-SubscriptionId <String>] [-Action <String[]>] [-Description <String>] [-DefaultProfile <PSObject>] [-AsJob]
  [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
-```
-
-### Create
-```
-New-AzContainerRegistryScopeMap -Name <String> -RegistryName <String> -ResourceGroupName <String>
- -ScopeMapCreateParameter <IScopeMap> [-SubscriptionId <String>] [-DefaultProfile <PSObject>] [-AsJob]
- [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
-```
-
-### CreateViaIdentity
-```
-New-AzContainerRegistryScopeMap -InputObject <IContainerRegistryIdentity> -ScopeMapCreateParameter <IScopeMap>
- [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
-```
-
-### CreateViaIdentityExpanded
-```
-New-AzContainerRegistryScopeMap -InputObject <IContainerRegistryIdentity> [-Action <String[]>]
- [-Description <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf]
- [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -66,7 +45,7 @@ repositories/repository-name/content/read,repositories/repository-name/metadata/
 
 ```yaml
 Type: System.String[]
-Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -111,7 +90,7 @@ The user friendly description of the scope map.
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -121,28 +100,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InputObject
-Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.IContainerRegistryIdentity
-Parameter Sets: CreateViaIdentity, CreateViaIdentityExpanded
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -Name
 The name of the scope map.
 
 ```yaml
 Type: System.String
-Parameter Sets: Create, CreateExpanded
+Parameter Sets: (All)
 Aliases: ScopeMapName
 
 Required: True
@@ -172,7 +135,7 @@ The name of the container registry.
 
 ```yaml
 Type: System.String
-Parameter Sets: Create, CreateExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -183,11 +146,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group to which the container registry belongs.
+The name of the resource group.
+The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: Create, CreateExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -197,28 +161,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ScopeMapCreateParameter
-An object that represents a scope map for a container registry.
-To construct, see NOTES section for SCOPEMAPCREATEPARAMETER properties and create a hash table.
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IScopeMap
-Parameter Sets: Create, CreateViaIdentity
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -SubscriptionId
-The Microsoft Azure subscription ID.
+The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String
-Parameter Sets: Create, CreateExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -264,52 +213,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IScopeMap
-
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.IContainerRegistryIdentity
-
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IScopeMap
+### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api202301Preview.IScopeMap
 
 ## NOTES
 
 ALIASES
-
-COMPLEX PARAMETER PROPERTIES
-
-To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
-
-
-`INPUTOBJECT <IContainerRegistryIdentity>`: Identity Parameter
-  - `[AgentPoolName <String>]`: The name of the agent pool.
-  - `[ConnectedRegistryName <String>]`: The name of the connected registry.
-  - `[ExportPipelineName <String>]`: The name of the export pipeline.
-  - `[GroupName <String>]`: The name of the private link resource.
-  - `[Id <String>]`: Resource identity path
-  - `[ImportPipelineName <String>]`: The name of the import pipeline.
-  - `[PipelineRunName <String>]`: The name of the pipeline run.
-  - `[PrivateEndpointConnectionName <String>]`: The name of the private endpoint connection.
-  - `[RegistryName <String>]`: The name of the container registry.
-  - `[ReplicationName <String>]`: The name of the replication.
-  - `[ResourceGroupName <String>]`: The name of the resource group to which the container registry belongs.
-  - `[RunId <String>]`: The run ID.
-  - `[ScopeMapName <String>]`: The name of the scope map.
-  - `[SubscriptionId <String>]`: The Microsoft Azure subscription ID.
-  - `[TaskName <String>]`: The name of the container registry task.
-  - `[TaskRunName <String>]`: The name of the task run.
-  - `[TokenName <String>]`: The name of the token.
-  - `[WebhookName <String>]`: The name of the webhook.
-
-`SCOPEMAPCREATEPARAMETER <IScopeMap>`: An object that represents a scope map for a container registry.
-  - `[SystemDataCreatedAt <DateTime?>]`: The timestamp of resource creation (UTC).
-  - `[SystemDataCreatedBy <String>]`: The identity that created the resource.
-  - `[SystemDataCreatedByType <CreatedByType?>]`: The type of identity that created the resource.
-  - `[SystemDataLastModifiedAt <DateTime?>]`: The timestamp of resource modification (UTC).
-  - `[SystemDataLastModifiedBy <String>]`: The identity that last modified the resource.
-  - `[SystemDataLastModifiedByType <LastModifiedByType?>]`: The type of identity that last modified the resource.
-  - `[Action <String[]>]`: The list of scoped permissions for registry artifacts.         E.g. repositories/repository-name/content/read,         repositories/repository-name/metadata/write
-  - `[Description <String>]`: The user friendly description of the scope map.
 
 ## RELATED LINKS
 

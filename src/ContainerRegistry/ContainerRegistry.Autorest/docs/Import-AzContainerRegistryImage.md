@@ -28,21 +28,6 @@ Import-AzContainerRegistryImage -RegistryName <String> -ResourceGroupName <Strin
  [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
-### ImportViaIdentity
-```
-Import-AzContainerRegistryImage -InputObject <IContainerRegistryIdentity> -Parameter <IImportImageParameters>
- [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
-```
-
-### ImportViaIdentityExpanded
-```
-Import-AzContainerRegistryImage -InputObject <IContainerRegistryIdentity> -SourceImage <String>
- [-CredentialsPassword <String>] [-CredentialsUsername <String>] [-Mode <ImportMode>]
- [-SourceRegistryUri <String>] [-SourceResourceId <String>] [-TargetTag <String[]>]
- [-UntaggedTargetRepository <String[]>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-PassThru] [-Confirm]
- [-WhatIf] [<CommonParameters>]
-```
-
 ## DESCRIPTION
 Copies an image to this container registry from the specified container registry.
 
@@ -82,7 +67,7 @@ The password used to authenticate with the source registry.
 
 ```yaml
 Type: System.String
-Parameter Sets: ImportExpanded, ImportViaIdentityExpanded
+Parameter Sets: ImportExpanded
 Aliases:
 
 Required: False
@@ -97,7 +82,7 @@ The username to authenticate with the source registry.
 
 ```yaml
 Type: System.String
-Parameter Sets: ImportExpanded, ImportViaIdentityExpanded
+Parameter Sets: ImportExpanded
 Aliases:
 
 Required: False
@@ -122,29 +107,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InputObject
-Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.IContainerRegistryIdentity
-Parameter Sets: ImportViaIdentity, ImportViaIdentityExpanded
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -Mode
 When Force, any existing target tags will be overwritten.
 When NoForce, any existing target tags will fail the operation before any copying begins.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Support.ImportMode
-Parameter Sets: ImportExpanded, ImportViaIdentityExpanded
+Parameter Sets: ImportExpanded
 Aliases:
 
 Required: False
@@ -174,8 +143,8 @@ Accept wildcard characters: False
 To construct, see NOTES section for PARAMETER properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IImportImageParameters
-Parameter Sets: Import, ImportViaIdentity
+Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api202301Preview.IImportImageParameters
+Parameter Sets: Import
 Aliases:
 
 Required: True
@@ -205,7 +174,7 @@ The name of the container registry.
 
 ```yaml
 Type: System.String
-Parameter Sets: Import, ImportExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -216,11 +185,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group to which the container registry belongs.
+The name of the resource group.
+The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: Import, ImportExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -236,7 +206,7 @@ This will use the 'latest' tag.Specify an image by tag ('hello-world:latest').Sp
 
 ```yaml
 Type: System.String
-Parameter Sets: ImportExpanded, ImportViaIdentityExpanded
+Parameter Sets: ImportExpanded
 Aliases:
 
 Required: True
@@ -252,7 +222,7 @@ The address of the source registry (e.g.
 
 ```yaml
 Type: System.String
-Parameter Sets: ImportExpanded, ImportViaIdentityExpanded
+Parameter Sets: ImportExpanded
 Aliases:
 
 Required: False
@@ -267,7 +237,7 @@ The resource identifier of the source Azure Container Registry.
 
 ```yaml
 Type: System.String
-Parameter Sets: ImportExpanded, ImportViaIdentityExpanded
+Parameter Sets: ImportExpanded
 Aliases:
 
 Required: False
@@ -278,11 +248,12 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-The Microsoft Azure subscription ID.
+The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String
-Parameter Sets: Import, ImportExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -298,7 +269,7 @@ When tag is omitted the source will be used (or 'latest' if source tag is also o
 
 ```yaml
 Type: System.String[]
-Parameter Sets: ImportExpanded, ImportViaIdentityExpanded
+Parameter Sets: ImportExpanded
 Aliases:
 
 Required: False
@@ -314,7 +285,7 @@ No tag will be created.
 
 ```yaml
 Type: System.String[]
-Parameter Sets: ImportExpanded, ImportViaIdentityExpanded
+Parameter Sets: ImportExpanded
 Aliases:
 
 Required: False
@@ -360,9 +331,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IImportImageParameters
-
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.IContainerRegistryIdentity
+### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api202301Preview.IImportImageParameters
 
 ## OUTPUTS
 
@@ -376,26 +345,6 @@ COMPLEX PARAMETER PROPERTIES
 
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
-
-`INPUTOBJECT <IContainerRegistryIdentity>`: Identity Parameter
-  - `[AgentPoolName <String>]`: The name of the agent pool.
-  - `[ConnectedRegistryName <String>]`: The name of the connected registry.
-  - `[ExportPipelineName <String>]`: The name of the export pipeline.
-  - `[GroupName <String>]`: The name of the private link resource.
-  - `[Id <String>]`: Resource identity path
-  - `[ImportPipelineName <String>]`: The name of the import pipeline.
-  - `[PipelineRunName <String>]`: The name of the pipeline run.
-  - `[PrivateEndpointConnectionName <String>]`: The name of the private endpoint connection.
-  - `[RegistryName <String>]`: The name of the container registry.
-  - `[ReplicationName <String>]`: The name of the replication.
-  - `[ResourceGroupName <String>]`: The name of the resource group to which the container registry belongs.
-  - `[RunId <String>]`: The run ID.
-  - `[ScopeMapName <String>]`: The name of the scope map.
-  - `[SubscriptionId <String>]`: The Microsoft Azure subscription ID.
-  - `[TaskName <String>]`: The name of the container registry task.
-  - `[TaskRunName <String>]`: The name of the task run.
-  - `[TokenName <String>]`: The name of the token.
-  - `[WebhookName <String>]`: The name of the webhook.
 
 `PARAMETER <IImportImageParameters>`: .
   - `SourceImage <String>`: Repository name of the source image.         Specify an image by repository ('hello-world'). This will use the 'latest' tag.         Specify an image by tag ('hello-world:latest').         Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').

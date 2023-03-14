@@ -12,7 +12,6 @@ Creates an import pipeline for a container registry with the specified parameter
 
 ## SYNTAX
 
-### CreateExpanded (Default)
 ```
 New-AzContainerRegistryImportPipeline -Name <String> -RegistryName <String> -ResourceGroupName <String>
  [-SubscriptionId <String>] [-IdentityPrincipalId <String>] [-IdentityTenantId <String>]
@@ -22,30 +21,6 @@ New-AzContainerRegistryImportPipeline -Name <String> -RegistryName <String> -Res
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
-### Create
-```
-New-AzContainerRegistryImportPipeline -Name <String> -RegistryName <String> -ResourceGroupName <String>
- -ImportPipelineCreateParameter <IImportPipeline> [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
- [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
-```
-
-### CreateViaIdentity
-```
-New-AzContainerRegistryImportPipeline -InputObject <IContainerRegistryIdentity>
- -ImportPipelineCreateParameter <IImportPipeline> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm]
- [-WhatIf] [<CommonParameters>]
-```
-
-### CreateViaIdentityExpanded
-```
-New-AzContainerRegistryImportPipeline -InputObject <IContainerRegistryIdentity>
- [-IdentityPrincipalId <String>] [-IdentityTenantId <String>] [-IdentityType <ResourceIdentityType>]
- [-IdentityUserAssignedIdentity <Hashtable>] [-Location <String>] [-Option <PipelineOptions[]>]
- [-SourceKeyVaultUri <String>] [-SourceTriggerStatus <TriggerStatus>] [-SourceType <PipelineSourceType>]
- [-SourceUri <String>] [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm] [-WhatIf]
- [<CommonParameters>]
-```
-
 ## DESCRIPTION
 Creates an import pipeline for a container registry with the specified parameters.
 
@@ -53,7 +28,7 @@ Creates an import pipeline for a container registry with the specified parameter
 
 ### Example 1: Create a new import pipeline
 ```powershell
-New-AzContainerRegistryExportPipeline -name Exam -RegistryName RegistryExample -ResourceGroupName MyResourceGroup -IdentityType 'SystemAssigned' -SourceType AzureStorageBlobContainer -SourceUri https://sa.blob.core.windows.net/public/ -SourceKeyVaultUri https://examplekeyvault.vault.azure.net/secrets/test/18d55a35beba4b20bdd044a2a9d14c30
+New-AzContainerRegistryImportPipeline -name Exam -RegistryName RegistryExample -ResourceGroupName MyResourceGroup -IdentityType 'SystemAssigned' -SourceType AzureStorageBlobContainer -SourceUri https://sa.blob.core.windows.net/public/ -SourceKeyVaultUri https://examplekeyvault.vault.azure.net/secrets/test/18d55a35beba4b20bdd044a2a9d14c30
 ```
 
 ```output
@@ -101,7 +76,7 @@ The principal ID of resource identity.
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -116,7 +91,7 @@ The tenant ID of resource.
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -131,7 +106,7 @@ The identity type.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Support.ResourceIdentityType
-Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -147,7 +122,7 @@ The user identity dictionary key references will be ARM resource ids in the form
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -157,44 +132,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ImportPipelineCreateParameter
-An object that represents an import pipeline for a container registry.
-To construct, see NOTES section for IMPORTPIPELINECREATEPARAMETER properties and create a hash table.
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IImportPipeline
-Parameter Sets: Create, CreateViaIdentity
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -InputObject
-Identity Parameter
-To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.IContainerRegistryIdentity
-Parameter Sets: CreateViaIdentity, CreateViaIdentityExpanded
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -Location
 The location of the import pipeline.
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -209,7 +152,7 @@ The name of the import pipeline.
 
 ```yaml
 Type: System.String
-Parameter Sets: Create, CreateExpanded
+Parameter Sets: (All)
 Aliases: ImportPipelineName
 
 Required: True
@@ -239,7 +182,7 @@ The list of all options configured for the pipeline.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Support.PipelineOptions[]
-Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -254,7 +197,7 @@ The name of the container registry.
 
 ```yaml
 Type: System.String
-Parameter Sets: Create, CreateExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -265,11 +208,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group to which the container registry belongs.
+The name of the resource group.
+The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: Create, CreateExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -284,7 +228,7 @@ They key vault secret uri to obtain the source storage SAS token.
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -299,7 +243,7 @@ The current status of the source trigger.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Support.TriggerStatus
-Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -314,7 +258,7 @@ The type of source for the import pipeline.
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Support.PipelineSourceType
-Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -329,7 +273,7 @@ The source uri of the import pipeline.When 'AzureStorageBlob': "https://accountN
 
 ```yaml
 Type: System.String
-Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -340,11 +284,12 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-The Microsoft Azure subscription ID.
+The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String
-Parameter Sets: Create, CreateExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -390,61 +335,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IImportPipeline
-
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.IContainerRegistryIdentity
-
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IImportPipeline
+### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api202301Preview.IImportPipeline
 
 ## NOTES
 
 ALIASES
-
-COMPLEX PARAMETER PROPERTIES
-
-To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
-
-
-`IMPORTPIPELINECREATEPARAMETER <IImportPipeline>`: An object that represents an import pipeline for a container registry.
-  - `[SystemDataCreatedAt <DateTime?>]`: The timestamp of resource creation (UTC).
-  - `[SystemDataCreatedBy <String>]`: The identity that created the resource.
-  - `[SystemDataCreatedByType <CreatedByType?>]`: The type of identity that created the resource.
-  - `[SystemDataLastModifiedAt <DateTime?>]`: The timestamp of resource modification (UTC).
-  - `[SystemDataLastModifiedBy <String>]`: The identity that last modified the resource.
-  - `[SystemDataLastModifiedByType <LastModifiedByType?>]`: The type of identity that last modified the resource.
-  - `[IdentityPrincipalId <String>]`: The principal ID of resource identity.
-  - `[IdentityTenantId <String>]`: The tenant ID of resource.
-  - `[IdentityType <ResourceIdentityType?>]`: The identity type.
-  - `[IdentityUserAssignedIdentity <IIdentityPropertiesUserAssignedIdentities>]`: The list of user identities associated with the resource. The user identity         dictionary key references will be ARM resource ids in the form:         '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/             providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
-    - `[(Any) <IUserIdentityProperties>]`: This indicates any property can be added to this object.
-  - `[Location <String>]`: The location of the import pipeline.
-  - `[Option <PipelineOptions[]>]`: The list of all options configured for the pipeline.
-  - `[SourceKeyVaultUri <String>]`: They key vault secret uri to obtain the source storage SAS token.
-  - `[SourceTriggerStatus <TriggerStatus?>]`: The current status of the source trigger.
-  - `[SourceType <PipelineSourceType?>]`: The type of source for the import pipeline.
-  - `[SourceUri <String>]`: The source uri of the import pipeline.         When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"         When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/containerName"
-
-`INPUTOBJECT <IContainerRegistryIdentity>`: Identity Parameter
-  - `[AgentPoolName <String>]`: The name of the agent pool.
-  - `[ConnectedRegistryName <String>]`: The name of the connected registry.
-  - `[ExportPipelineName <String>]`: The name of the export pipeline.
-  - `[GroupName <String>]`: The name of the private link resource.
-  - `[Id <String>]`: Resource identity path
-  - `[ImportPipelineName <String>]`: The name of the import pipeline.
-  - `[PipelineRunName <String>]`: The name of the pipeline run.
-  - `[PrivateEndpointConnectionName <String>]`: The name of the private endpoint connection.
-  - `[RegistryName <String>]`: The name of the container registry.
-  - `[ReplicationName <String>]`: The name of the replication.
-  - `[ResourceGroupName <String>]`: The name of the resource group to which the container registry belongs.
-  - `[RunId <String>]`: The run ID.
-  - `[ScopeMapName <String>]`: The name of the scope map.
-  - `[SubscriptionId <String>]`: The Microsoft Azure subscription ID.
-  - `[TaskName <String>]`: The name of the container registry task.
-  - `[TaskRunName <String>]`: The name of the task run.
-  - `[TokenName <String>]`: The name of the token.
-  - `[WebhookName <String>]`: The name of the webhook.
 
 ## RELATED LINKS
 

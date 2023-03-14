@@ -120,7 +120,7 @@ The name of the container registry.
 ```yaml
 Type: System.String
 Parameter Sets: Get
-Aliases: RegistryName
+Aliases: RegistryName, ResourceName, ContainerRegistryName
 
 Required: True
 Position: Named
@@ -130,7 +130,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group to which the container registry belongs.
+The name of the resource group.
+The name is case insensitive.
 
 ```yaml
 Type: System.String
@@ -145,7 +146,8 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-The Microsoft Azure subscription ID.
+The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String[]
@@ -168,7 +170,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IRegistry
+### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api202301Preview.IRegistry
 
 ## NOTES
 
@@ -181,7 +183,9 @@ To create the parameters described below, construct a hash table containing the 
 
 `INPUTOBJECT <IContainerRegistryIdentity>`: Identity Parameter
   - `[AgentPoolName <String>]`: The name of the agent pool.
+  - `[CacheRuleName <String>]`: The name of the cache rule.
   - `[ConnectedRegistryName <String>]`: The name of the connected registry.
+  - `[CredentialSetName <String>]`: The name of the credential set.
   - `[ExportPipelineName <String>]`: The name of the export pipeline.
   - `[GroupName <String>]`: The name of the private link resource.
   - `[Id <String>]`: Resource identity path
@@ -190,10 +194,10 @@ To create the parameters described below, construct a hash table containing the 
   - `[PrivateEndpointConnectionName <String>]`: The name of the private endpoint connection.
   - `[RegistryName <String>]`: The name of the container registry.
   - `[ReplicationName <String>]`: The name of the replication.
-  - `[ResourceGroupName <String>]`: The name of the resource group to which the container registry belongs.
+  - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.
   - `[RunId <String>]`: The run ID.
   - `[ScopeMapName <String>]`: The name of the scope map.
-  - `[SubscriptionId <String>]`: The Microsoft Azure subscription ID.
+  - `[SubscriptionId <String>]`: The ID of the target subscription. The value must be an UUID.
   - `[TaskName <String>]`: The name of the container registry task.
   - `[TaskRunName <String>]`: The name of the task run.
   - `[TokenName <String>]`: The name of the token.

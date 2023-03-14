@@ -20,10 +20,10 @@ Describe 'Update-AzContainerRegistry' {
     }
 
     It 'Update' {
-        $a = New-AzContainerRegistryIPRuleObject -IPAddressOrRange 192.159.0.31 -Action 'Forbidden'
-        $b = New-AzContainerRegistryIPRuleObject -IPAddressOrRange 192.158.0.31 -Action 'Forbidden'
-        $c = @($a, $b)
-        { Update-AzContainerRegistry   -RegistryName $env.rstr1 -sku 'Premium' -ResourceGroupName $env.resourceGroup -NetworkRuleSetIPRule $c} | Should -Not -Throw
+        $network1 = New-AzContainerRegistryIPRuleObject -IPAddressOrRange 192.159.0.31 -Action 'Forbidden'
+        $network2 = New-AzContainerRegistryIPRuleObject -IPAddressOrRange 192.158.0.31 -Action 'Forbidden'
+        $networkSet = @($network1, $network2)
+        { Update-AzContainerRegistry   -RegistryName $env.rstr1 -sku 'Premium' -ResourceGroupName $env.resourceGroup -NetworkRuleSetIPRule $networkSet} | Should -Not -Throw
     }
 
     It 'UpdateViaIdentityExpanded' -skip {

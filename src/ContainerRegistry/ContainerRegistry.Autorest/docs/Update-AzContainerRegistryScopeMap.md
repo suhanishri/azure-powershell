@@ -19,20 +19,6 @@ Update-AzContainerRegistryScopeMap -Name <String> -RegistryName <String> -Resour
  [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
-### Update
-```
-Update-AzContainerRegistryScopeMap -Name <String> -RegistryName <String> -ResourceGroupName <String>
- -ScopeMapUpdateParameter <IScopeMapUpdateParameters> [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
- [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
-```
-
-### UpdateViaIdentity
-```
-Update-AzContainerRegistryScopeMap -InputObject <IContainerRegistryIdentity>
- -ScopeMapUpdateParameter <IScopeMapUpdateParameters> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait]
- [-Confirm] [-WhatIf] [<CommonParameters>]
-```
-
 ### UpdateViaIdentityExpanded
 ```
 Update-AzContainerRegistryScopeMap -InputObject <IContainerRegistryIdentity> [-Action <String[]>]
@@ -48,7 +34,6 @@ Updates a scope map with the specified parameters.
 ### Example 1: Update action for a scope map
 ```powershell
 Update-AzContainerRegistryScopeMap -Name newmap -RegistryName RegistryExample -ResourceGroupName MyResourceGroup -Action "repositories/busybox/content/read"
-
 ```
 
 ```output
@@ -68,7 +53,7 @@ repositories/repository-name/pull, repositories/repository-name/delete
 
 ```yaml
 Type: System.String[]
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -113,7 +98,7 @@ The user friendly description of the scope map.
 
 ```yaml
 Type: System.String
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -129,7 +114,7 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.IContainerRegistryIdentity
-Parameter Sets: UpdateViaIdentity, UpdateViaIdentityExpanded
+Parameter Sets: UpdateViaIdentityExpanded
 Aliases:
 
 Required: True
@@ -144,7 +129,7 @@ The name of the scope map.
 
 ```yaml
 Type: System.String
-Parameter Sets: Update, UpdateExpanded
+Parameter Sets: UpdateExpanded
 Aliases: ScopeMapName
 
 Required: True
@@ -174,7 +159,7 @@ The name of the container registry.
 
 ```yaml
 Type: System.String
-Parameter Sets: Update, UpdateExpanded
+Parameter Sets: UpdateExpanded
 Aliases:
 
 Required: True
@@ -185,11 +170,12 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group to which the container registry belongs.
+The name of the resource group.
+The name is case insensitive.
 
 ```yaml
 Type: System.String
-Parameter Sets: Update, UpdateExpanded
+Parameter Sets: UpdateExpanded
 Aliases:
 
 Required: True
@@ -199,28 +185,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ScopeMapUpdateParameter
-The properties for updating the scope map.
-To construct, see NOTES section for SCOPEMAPUPDATEPARAMETER properties and create a hash table.
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IScopeMapUpdateParameters
-Parameter Sets: Update, UpdateViaIdentity
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -SubscriptionId
-The Microsoft Azure subscription ID.
+The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String
-Parameter Sets: Update, UpdateExpanded
+Parameter Sets: UpdateExpanded
 Aliases:
 
 Required: False
@@ -266,13 +237,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IScopeMapUpdateParameters
-
 ### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.IContainerRegistryIdentity
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IScopeMap
+### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api202301Preview.IScopeMap
 
 ## NOTES
 
@@ -285,7 +254,9 @@ To create the parameters described below, construct a hash table containing the 
 
 `INPUTOBJECT <IContainerRegistryIdentity>`: Identity Parameter
   - `[AgentPoolName <String>]`: The name of the agent pool.
+  - `[CacheRuleName <String>]`: The name of the cache rule.
   - `[ConnectedRegistryName <String>]`: The name of the connected registry.
+  - `[CredentialSetName <String>]`: The name of the credential set.
   - `[ExportPipelineName <String>]`: The name of the export pipeline.
   - `[GroupName <String>]`: The name of the private link resource.
   - `[Id <String>]`: Resource identity path
@@ -294,18 +265,14 @@ To create the parameters described below, construct a hash table containing the 
   - `[PrivateEndpointConnectionName <String>]`: The name of the private endpoint connection.
   - `[RegistryName <String>]`: The name of the container registry.
   - `[ReplicationName <String>]`: The name of the replication.
-  - `[ResourceGroupName <String>]`: The name of the resource group to which the container registry belongs.
+  - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.
   - `[RunId <String>]`: The run ID.
   - `[ScopeMapName <String>]`: The name of the scope map.
-  - `[SubscriptionId <String>]`: The Microsoft Azure subscription ID.
+  - `[SubscriptionId <String>]`: The ID of the target subscription. The value must be an UUID.
   - `[TaskName <String>]`: The name of the container registry task.
   - `[TaskRunName <String>]`: The name of the task run.
   - `[TokenName <String>]`: The name of the token.
   - `[WebhookName <String>]`: The name of the webhook.
-
-`SCOPEMAPUPDATEPARAMETER <IScopeMapUpdateParameters>`: The properties for updating the scope map.
-  - `[Action <String[]>]`: The list of scope permissions for registry artifacts.         E.g. repositories/repository-name/pull,         repositories/repository-name/delete
-  - `[Description <String>]`: The user friendly description of the scope map.
 
 ## RELATED LINKS
 

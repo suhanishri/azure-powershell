@@ -15,7 +15,7 @@ if(($null -eq $TestName) -or ($TestName -contains 'New-AzContainerRegistryIPRule
 }
 
 Describe 'New-AzContainerRegistryIPRuleObject' {
-    It '__AllParameterSets' -skip {
-        { throw [System.NotImplementedException] } | Should -Not -Throw
+    It '__AllParameterSets' {
+        {New-AzContainerRegistryIPRuleObject -IPAddressOrRange 0.0.0.0 -Action 'Allow' } | Should -Not -Throw
     }
 }

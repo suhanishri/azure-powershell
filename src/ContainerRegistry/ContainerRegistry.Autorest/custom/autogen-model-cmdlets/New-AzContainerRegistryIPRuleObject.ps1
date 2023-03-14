@@ -21,12 +21,12 @@ Create an in-memory object for IPRule.
 Create an in-memory object for IPRule.
 
 .Outputs
-Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IPRule
+Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api202301Preview.IPRule
 .Link
 https://learn.microsoft.com/powershell/module/az.ContainerRegistry/new-AzContainerRegistryIPRuleObject
 #>
 function New-AzContainerRegistryIPRuleObject {
-    [OutputType('Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IPRule')]
+    [OutputType('Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api202301Preview.IPRule')]
     [CmdletBinding(PositionalBinding=$false)]
     Param(
 
@@ -40,7 +40,7 @@ function New-AzContainerRegistryIPRuleObject {
     )
 
     process {
-        $Object = [Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IPRule]::New()
+        $Object = [Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api202301Preview.IPRule]::New()
 
         if ($PSBoundParameters.ContainsKey('Action')) {
             $Object.Action = $Action

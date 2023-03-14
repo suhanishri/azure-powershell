@@ -20,7 +20,7 @@ function setupEnv() {
     $env.Tenant = (Get-AzContext).Tenant.Id
     # For any resources you created for test, you should add it to $env here.
     # Generate some random strings for use in the test.
-    $rstr1 = "lnxcr"
+    $rstr1 = RandomString -allChars $false -len 6
     $rstr2 = RandomString -allChars $false -len 6
     $rstr3 = RandomString -allChars $false -len 6
     $rstr4 = RandomString -allChars $false -len 6
@@ -41,8 +41,10 @@ function setupEnv() {
     $null = $env.Add("replication3", "replication003")
     # Create the test group
     write-host "start to create test group"
-    $resourceGroup = "lnxtest"
+    $resourceGroup = "ContainerTest"
     $null = $env.Add("resourceGroup", $resourceGroup)
+    New-AzResourceGroup -Name $resourceGroup -Location "westus"
+    New-AzContainerRegistry -RegistryName $env.rstr1 -sku 'Premium' -ResourceGroupName $env.ResourceGroup -Location "westus"
     New-AzContainerRegistryReplication -RegistryName $rstr1 -ResourceGroupName  $resourceGroup -Name $replication -Location 'east us'
     $envFile = 'env.json'
     if ($TestMode -eq 'live') {
@@ -53,5 +55,6 @@ function setupEnv() {
 function cleanupEnv() {
     # Clean resources you create for testing
     # Removing resourcegroup will clean all the resources created for testing.
+    Remove-AzResourceGroup -Name $env.resourceGroup
 }
 

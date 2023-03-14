@@ -25,13 +25,6 @@ Update-AzContainerRegistryCredential -RegistryName <String> -ResourceGroupName <
  [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
-### RegenerateViaIdentity
-```
-Update-AzContainerRegistryCredential -InputObject <IContainerRegistryIdentity>
- -RegenerateCredentialParameter <IRegenerateCredentialParameters> [-DefaultProfile <PSObject>] [-Confirm]
- [-WhatIf] [<CommonParameters>]
-```
-
 ### RegenerateViaIdentityExpanded
 ```
 Update-AzContainerRegistryCredential -InputObject <IContainerRegistryIdentity> -Name <PasswordName>
@@ -43,21 +36,27 @@ Regenerates one of the login credentials for the specified container registry.
 
 ## EXAMPLES
 
-### Example 1: Regenerate a login credential for a container registry
+### Example 1: {{ Add title here }}
 ```powershell
- $Cred =  Update-AzContainerRegistryCredential  -ResourceGroupName "MyResourceGroup" -Name "password" -RegistryName "RegistryExample"
- $Cred.Password
+{{ Add code here }}
 ```
 
 ```output
-Name      Value
-----      -----
-password  XCzduYWqL05cO3k5BPBHH76GnBJRXJ0UmnWkdJRBKm+ACRBYty1E
-password2 IfkrXWliroUg/FjVr5is+cY0XwF3yLFUonxCvh+VH++ACRCNkmdo
+{{ Add output here }}
 ```
 
-This command regenerates a login credential for the specified container registry.
-Admin user has to be enabled for the container registry `RegistryExample` to regenerate login credentials.
+{{ Add description here }}
+
+### Example 2: {{ Add title here }}
+```powershell
+{{ Add code here }}
+```
+
+```output
+{{ Add output here }}
+```
+
+{{ Add description here }}
 
 ## PARAMETERS
 
@@ -82,7 +81,7 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.IContainerRegistryIdentity
-Parameter Sets: RegenerateViaIdentity, RegenerateViaIdentityExpanded
+Parameter Sets: RegenerateViaIdentityExpanded
 Aliases:
 
 Required: True
@@ -112,8 +111,8 @@ The parameters used to regenerate the login credential.
 To construct, see NOTES section for REGENERATECREDENTIALPARAMETER properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IRegenerateCredentialParameters
-Parameter Sets: Regenerate, RegenerateViaIdentity
+Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api202301Preview.IRegenerateCredentialParameters
+Parameter Sets: Regenerate
 Aliases:
 
 Required: True
@@ -139,7 +138,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group to which the container registry belongs.
+The name of the resource group.
+The name is case insensitive.
 
 ```yaml
 Type: System.String
@@ -154,7 +154,8 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-The Microsoft Azure subscription ID.
+The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String
@@ -204,13 +205,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IRegenerateCredentialParameters
+### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api202301Preview.IRegenerateCredentialParameters
 
 ### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.IContainerRegistryIdentity
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IRegistryListCredentialsResult
+### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api202301Preview.IRegistryListCredentialsResult
 
 ## NOTES
 
@@ -223,7 +224,9 @@ To create the parameters described below, construct a hash table containing the 
 
 `INPUTOBJECT <IContainerRegistryIdentity>`: Identity Parameter
   - `[AgentPoolName <String>]`: The name of the agent pool.
+  - `[CacheRuleName <String>]`: The name of the cache rule.
   - `[ConnectedRegistryName <String>]`: The name of the connected registry.
+  - `[CredentialSetName <String>]`: The name of the credential set.
   - `[ExportPipelineName <String>]`: The name of the export pipeline.
   - `[GroupName <String>]`: The name of the private link resource.
   - `[Id <String>]`: Resource identity path
@@ -232,10 +235,10 @@ To create the parameters described below, construct a hash table containing the 
   - `[PrivateEndpointConnectionName <String>]`: The name of the private endpoint connection.
   - `[RegistryName <String>]`: The name of the container registry.
   - `[ReplicationName <String>]`: The name of the replication.
-  - `[ResourceGroupName <String>]`: The name of the resource group to which the container registry belongs.
+  - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.
   - `[RunId <String>]`: The run ID.
   - `[ScopeMapName <String>]`: The name of the scope map.
-  - `[SubscriptionId <String>]`: The Microsoft Azure subscription ID.
+  - `[SubscriptionId <String>]`: The ID of the target subscription. The value must be an UUID.
   - `[TaskName <String>]`: The name of the container registry task.
   - `[TaskRunName <String>]`: The name of the task run.
   - `[TokenName <String>]`: The name of the token.

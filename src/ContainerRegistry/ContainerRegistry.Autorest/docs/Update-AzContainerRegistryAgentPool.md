@@ -19,20 +19,6 @@ Update-AzContainerRegistryAgentPool -Name <String> -RegistryName <String> -Resou
  [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
-### Update
-```
-Update-AzContainerRegistryAgentPool -Name <String> -RegistryName <String> -ResourceGroupName <String>
- -UpdateParameter <IAgentPoolUpdateParameters> [-SubscriptionId <String>] [-DefaultProfile <PSObject>]
- [-AsJob] [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
-```
-
-### UpdateViaIdentity
-```
-Update-AzContainerRegistryAgentPool -InputObject <IContainerRegistryIdentity>
- -UpdateParameter <IAgentPoolUpdateParameters> [-DefaultProfile <PSObject>] [-AsJob] [-NoWait] [-Confirm]
- [-WhatIf] [<CommonParameters>]
-```
-
 ### UpdateViaIdentityExpanded
 ```
 Update-AzContainerRegistryAgentPool -InputObject <IContainerRegistryIdentity> [-Count <Int32>]
@@ -46,7 +32,7 @@ Updates an agent pool with the specified parameters.
 
 ### Example 1: Updates an agent pool with the specified parameters
 ```powershell
- update-AzContainerRegistryAgentPool -AgentPoolName agent -RegistryName RegistryExample -ResourceGroupName MyResourceGroup -Count 5
+Update-AzContainerRegistryAgentPool -AgentPoolName agent -RegistryName RegistryExample -ResourceGroupName MyResourceGroup -Count 5
 ```
 
 ```output
@@ -79,7 +65,7 @@ The count of agent machine
 
 ```yaml
 Type: System.Int32
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -110,7 +96,7 @@ To construct, see NOTES section for INPUTOBJECT properties and create a hash tab
 
 ```yaml
 Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.IContainerRegistryIdentity
-Parameter Sets: UpdateViaIdentity, UpdateViaIdentityExpanded
+Parameter Sets: UpdateViaIdentityExpanded
 Aliases:
 
 Required: True
@@ -125,7 +111,7 @@ The name of the agent pool.
 
 ```yaml
 Type: System.String
-Parameter Sets: Update, UpdateExpanded
+Parameter Sets: UpdateExpanded
 Aliases: AgentPoolName
 
 Required: True
@@ -155,7 +141,7 @@ The name of the container registry.
 
 ```yaml
 Type: System.String
-Parameter Sets: Update, UpdateExpanded
+Parameter Sets: UpdateExpanded
 Aliases:
 
 Required: True
@@ -170,7 +156,7 @@ The name of the resource group to which the container registry belongs.
 
 ```yaml
 Type: System.String
-Parameter Sets: Update, UpdateExpanded
+Parameter Sets: UpdateExpanded
 Aliases:
 
 Required: True
@@ -181,11 +167,12 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-The Microsoft Azure subscription ID.
+The ID of the target subscription.
+The value must be an UUID.
 
 ```yaml
 Type: System.String
-Parameter Sets: Update, UpdateExpanded
+Parameter Sets: UpdateExpanded
 Aliases:
 
 Required: False
@@ -200,29 +187,13 @@ The ARM resource tags.
 
 ```yaml
 Type: System.Collections.Hashtable
-Parameter Sets: UpdateExpanded, UpdateViaIdentityExpanded
-Aliases:
+Parameter Sets: (All)
+Aliases: Tags
 
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -UpdateParameter
-The parameters for updating an agent pool.
-To construct, see NOTES section for UPDATEPARAMETER properties and create a hash table.
-
-```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20190601Preview.IAgentPoolUpdateParameters
-Parameter Sets: Update, UpdateViaIdentity
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -262,8 +233,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20190601Preview.IAgentPoolUpdateParameters
-
 ### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.IContainerRegistryIdentity
 
 ## OUTPUTS
@@ -281,7 +250,9 @@ To create the parameters described below, construct a hash table containing the 
 
 `INPUTOBJECT <IContainerRegistryIdentity>`: Identity Parameter
   - `[AgentPoolName <String>]`: The name of the agent pool.
+  - `[CacheRuleName <String>]`: The name of the cache rule.
   - `[ConnectedRegistryName <String>]`: The name of the connected registry.
+  - `[CredentialSetName <String>]`: The name of the credential set.
   - `[ExportPipelineName <String>]`: The name of the export pipeline.
   - `[GroupName <String>]`: The name of the private link resource.
   - `[Id <String>]`: Resource identity path
@@ -290,19 +261,14 @@ To create the parameters described below, construct a hash table containing the 
   - `[PrivateEndpointConnectionName <String>]`: The name of the private endpoint connection.
   - `[RegistryName <String>]`: The name of the container registry.
   - `[ReplicationName <String>]`: The name of the replication.
-  - `[ResourceGroupName <String>]`: The name of the resource group to which the container registry belongs.
+  - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.
   - `[RunId <String>]`: The run ID.
   - `[ScopeMapName <String>]`: The name of the scope map.
-  - `[SubscriptionId <String>]`: The Microsoft Azure subscription ID.
+  - `[SubscriptionId <String>]`: The ID of the target subscription. The value must be an UUID.
   - `[TaskName <String>]`: The name of the container registry task.
   - `[TaskRunName <String>]`: The name of the task run.
   - `[TokenName <String>]`: The name of the token.
   - `[WebhookName <String>]`: The name of the webhook.
-
-`UPDATEPARAMETER <IAgentPoolUpdateParameters>`: The parameters for updating an agent pool.
-  - `[Count <Int32?>]`: The count of agent machine
-  - `[Tag <IAgentPoolUpdateParametersTags>]`: The ARM resource tags.
-    - `[(Any) <String>]`: This indicates any property can be added to this object.
 
 ## RELATED LINKS
 

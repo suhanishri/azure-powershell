@@ -16,7 +16,7 @@ if(($null -eq $TestName) -or ($TestName -contains 'New-AzContainerRegistryAgentP
 
 Describe 'New-AzContainerRegistryAgentPool' {
     It 'CreateExpanded' -skip {
-        { throw [System.NotImplementedException] } | Should -Not -Throw
+        { New-AzContainerRegistryAgentPool -name $env.rstr1  -RegistryName $env.rstr1 -ResourceGroupName $env.ResourceGroup -Location 'eastus' -Count 1 -Tier S1 -os 'Linux' } | Should -Not -Throw
     }
 
     It 'Create' -skip {
