@@ -20,6 +20,8 @@
 
 -->
 ## Upcoming Release
+
+## Version 5.6.0
 * Removed the image alias `CoreOS` as the publisher CoreOS no longer has any images for Azure. 
 * Updated the names of the `openSUSE-Leap` and `SLES` aliases to `OpenSuseLeap154` and `SuseSles15SP4` respectively. Updated these aliases to point to an image that actually exists and updated the alias names to be descriptive and versioned.
 * Added new descriptive and versioned alias names for the Linux image aliases.

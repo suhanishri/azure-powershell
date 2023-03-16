@@ -364,6 +364,16 @@
       "Update-AzApplicationInsightsWorkbook": {},
       "Update-AzApplicationInsightsWorkbookTemplate": {}
     },
+    "Az.ArcResourceBridge": {
+      "Get-AzArcResourceBridge": {},
+      "Get-AzArcResourceBridgeApplianceCredential": {},
+      "Get-AzArcResourceBridgeCredential": {},
+      "Get-AzArcResourceBridgeTelemetryConfig": {},
+      "Get-AzArcResourceBridgeUpgradeGraph": {},
+      "New-AzArcResourceBridge": {},
+      "Remove-AzArcResourceBridge": {},
+      "Update-AzArcResourceBridge": {}
+    },
     "Az.Attestation": {
       "Get-AzAttestationPolicy": {},
       "Set-AzAttestationPolicy": {},
@@ -1405,7 +1415,16 @@
       "Remove-AzCosmosDBMongoDBUserDefinition": {},
       "Get-AzCosmosDBService": {},
       "New-AzCosmosDBService": {},
-      "Remove-AzCosmosDBService": {}
+      "Remove-AzCosmosDBService": {},
+      "Get-AzCosmosDBGremlinGraphBackupInformation": {},
+      "Get-AzCosmosDBGremlinRestorableDatabase": {},
+      "Get-AzCosmosDBGremlinRestorableGraph": {},
+      "Get-AzCosmosDBGremlinRestorableResource": {},
+      "Get-AzCosmosDBTableRestorableTable": {},
+      "Get-AzCosmosDBTableRestorableResource": {},
+      "Get-AzCosmosDBTableBackupInformation": {},
+      "New-AzCosmosDBGremlinDatabaseToRestore": {},
+      "New-AzCosmosDBTableToRestore": {}
     },
     "Az.CostManagement": {
       "Get-AzCostManagementExport": {},
@@ -4324,6 +4343,7 @@
       "Set-AzNetworkManagerManagementGroupConnection": {},
       "Get-AzFirewallLearnedIpPrefix": {},
       "New-AzFirewallPolicySnat": {},
+      "New-AzGatewayCustomBgpIpConfigurationObject": {},
       "List-AzApplicationGatewayAvailableWafRuleSets": {},
       "List-AzApplicationGatewayAvailableSslOptions": {},
       "List-AzApplicationGatewaySslPredefinedPolicy": {},
